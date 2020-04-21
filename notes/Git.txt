@@ -1,3 +1,7 @@
+设置git默认编辑器
+git config --global core.editor Code
+git config --global core.editor "vim"
+
 建立git仓库
 git init
 
