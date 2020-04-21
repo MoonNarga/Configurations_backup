@@ -2,9 +2,17 @@
 git config --global core.editor Code
 git config --global core.editor "vim"
 
+查看当前代理设置
+git config --global http.proxy
+git config --global https.proxy
 设置git代理
+git config --global http.proxy 'http://127.0.0.1:1080'
+git config --global https.proxy 'https://127.0.0.1:1080'
 git config --global http.proxy 'socks5://127.0.0.1:8090'
 git config --global https.proxy 'socks5://127.0.0.1:8090'
+取消git代理
+git config --global --unset http.proxy
+git config --global --unset https.proxy
 
 建立git仓库
 git init
