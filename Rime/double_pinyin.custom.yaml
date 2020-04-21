@@ -9,3 +9,5 @@ patch:
     opencc_config: emoji.json
     option_name: emoji_suggestion
     tips: all
+  reverse_lookup:
+  recognizer:
