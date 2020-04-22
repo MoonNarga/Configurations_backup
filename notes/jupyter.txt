@@ -1,0 +1,6 @@
+修改目录
+jupyter notebook --generate-config
+查找
+c.NotebookApp.notebook_dir
+添加
+更改快捷方式属性，删除“目标”末尾的 %USERPROFILE%
