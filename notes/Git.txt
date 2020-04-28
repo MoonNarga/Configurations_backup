@@ -90,3 +90,12 @@ git diff [本地库历史版本] <file>	#将工作区文件与本地库历史记
 	git merge <别名>/<branchname>
 	
 	pull=fetch+merge
+
+github desktop
+	user/```/.gitconfig
+[http]
+    proxy = socks5://127.0.0.1:1080
+[https]
+    proxy = socks5://127.0.0.1:1080
+[git]
+    proxy = socks5://127.0.0.1:1080
