@@ -28,17 +28,17 @@ apt换源：
 	如果遇到无法拉取 https 源的情况，请先使用 http 源并安装：
 	sudo apt install apt-transport-https ca-certificates
 
+	sudo cp /etc/apt/sources.list /etc/apt/sources.list.bak
 	sudo vim /etc/apt/sources.list
 
-	# 默认注释了源码镜像以提高 apt update 速度，如有需要可自行取消注释
-	deb https://mirrors.tuna.tsinghua.edu.cn/debian/ buster main contrib non-free
-	# deb-src https://mirrors.tuna.tsinghua.edu.cn/debian/ buster main contrib non-free
-	deb https://mirrors.tuna.tsinghua.edu.cn/debian/ buster-updates main contrib non-free
-	# deb-src https://mirrors.tuna.tsinghua.edu.cn/debian/ buster-updates main contrib non-free
-	deb https://mirrors.tuna.tsinghua.edu.cn/debian/ buster-backports main contrib non-free
-	# deb-src https://mirrors.tuna.tsinghua.edu.cn/debian/ buster-backports main contrib non-free
-	deb https://mirrors.tuna.tsinghua.edu.cn/debian-security buster/updates main contrib non-free
-	# deb-src https://mirrors.tuna.tsinghua.edu.cn/debian-security buster/updates main contrib non-free
+deb http://mirrors.aliyun.com/debian/ buster main non-free contrib
+deb-src http://mirrors.aliyun.com/debian/ buster main non-free contrib
+deb http://mirrors.aliyun.com/debian-security buster/updates main
+deb-src http://mirrors.aliyun.com/debian-security buster/updates main
+deb http://mirrors.aliyun.com/debian/ buster-updates main non-free contrib
+deb-src http://mirrors.aliyun.com/debian/ buster-updates main non-free contrib
+deb http://mirrors.aliyun.com/debian/ buster-backports main non-free contrib
+deb-src http://mirrors.aliyun.com/debian/ buster-backports main non-free contrib
 
 设置代理：
 export all_proxy=socks5://127.0.0.1:8090
