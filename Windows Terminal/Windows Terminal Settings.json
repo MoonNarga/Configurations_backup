@@ -45,13 +45,11 @@
                     // "tabTitle" : "PowerShell"
                 },
                 {
-                    // Make changes here to the powershell.exe profile
                     "guid": "{61c54bbd-c2c6-5271-96e7-009a87ff34bf}",
                     "name": "Git Bash",
                     "commandline": "D://Environments/Tools/Git/bin/bash.exe",
                     "hidden": false,
                     "startingDirectory":"D://Environments/repositories",// 启动的位置
-                    "background" : "#000000",//powershell背景颜色
                     "backgroundImage" : "D://Environments/Tools/VScodeBackgrounds/66855568_p0.jpg",
                     "backgroundImageOpacity": 0.5,
                     "backgroundImageStrechMode": "fill",//"none", "fill", "uniform", "uniformToFill"
