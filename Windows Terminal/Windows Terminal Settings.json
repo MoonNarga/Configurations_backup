@@ -26,6 +26,7 @@
                 "hidden": false,
                 "name": "PowerShell",
                 "source": "Windows.Terminal.PowershellCore",
+                "commandline": "pwsh.exe -nologo",
                 "startingDirectory": "D://Environments/repositories", // 启动的位置
                 "backgroundImage": "F:/PrPr/66855568_p0.jpg",
                 "backgroundImageOpacity": 0.5,
@@ -34,13 +35,13 @@
                 "closeOnExit": true, //
                 // "colorScheme" : "Solarized Light",//颜色主题
                 // "cursorColor" : "#657B83",//光标颜色
-                "cursorShape": "bar", //光标形状
-                // "fontFace" : "Sarasa Term SC",//字体
-                // "fontSize" : 12,
+                "cursorShape": "bar",//光标形状
+                "fontFace" : "Fira Code",//字体
+                "fontSize" : 11
                 // "historySize" : 9001,
                 // "padding" : "0, 0, 0, 0",
                 // "snapOnInput" : true,
-                "useAcrylic" : true//毛玻璃
+                // "useAcrylic" : true//毛玻璃
                 // "tabTitle" : "PowerShell"
             },
             
