@@ -30,6 +30,7 @@ if [ ! -n "${BULLETTRAIN_PROMPT_ORDER+1}" ]; then
     nvm
     aws
     go
+    anaconda
     rust
     elixir
     git
@@ -139,6 +140,17 @@ fi
 if [ ! -n "${BULLETTRAIN_GO_PREFIX+1}" ]; then
   BULLETTRAIN_GO_PREFIX="go"
 fi
+
+# Anaconda
+if [ ! -n "${BULLETTRAIN_ANACONDA_BG+1}" ]; then
+  BULLETTRAIN_ANACONDA_BG=183
+fi
+if [ ! -n "${BULLETTRAIN_ANACONDA_FG+1}" ]; then
+  BULLETTRAIN_ANACONDA_FG=black
+fi
+# if [ ! -n "${BULLETTRAIN_ANACONDA_PREFIX+1}" ]; then
+#   BULLETTRAIN_ANACONDA_PREFIX="py"
+# fi
 
 # Rust
 if [ ! -n "${BULLETTRAIN_RUST_BG+1}" ]; then
@@ -556,6 +568,13 @@ prompt_rust() {
     if command -v rustc > /dev/null 2>&1; then
       prompt_segment $BULLETTRAIN_RUST_BG $BULLETTRAIN_RUST_FG $BULLETTRAIN_RUST_PREFIX" $(rustc -V version | cut -d' ' -f2)"
     fi
+  fi
+}
+
+# anaconda
+prompt_anaconda() {
+  if [[ ! -z $CONDA_DEFAULT_ENV ]]; then
+    prompt_segment $BULLETTRAIN_ANACONDA_BG $BULLETTRAIN_ANACONDA_FG $BULLETTRAIN_ANACONDA_PREFIX" $CONDA_DEFAULT_ENV"
   fi
 }
 
