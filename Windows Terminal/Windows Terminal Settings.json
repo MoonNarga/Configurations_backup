@@ -24,16 +24,17 @@
             {
                 "guid": "{574e775e-4f2a-5b96-ac1e-a2962a402336}",
                 "hidden": false,
-                "name": "PowerShell",
-                "source": "Windows.Terminal.PowershellCore",
+                "name": "PowerShell 7",
+                // "source": "Windows.Terminal.PowershellCore",
                 "commandline": "pwsh.exe -nologo",
-                "startingDirectory": "D://Environments/repositories", // 启动的位置
+                "startingDirectory": "D://Workspace/Repos", // 启动的位置
                 "backgroundImage": "F:/PrPr/66855568_p0.jpg",
                 "backgroundImageOpacity": 0.5,
                 "backgroundImageStrechMode": "fill", //"none", "fill", "uniform", "uniformToFill"
                 "acrylicOpacity": 0.5, //不透明度
                 "closeOnExit": true, //
-                // "colorScheme" : "Solarized Light",//颜色主题
+                "icon": "C:/Users/MoonN/Environment/Tools/PowerShell-7/assets/StoreLogo.png",
+                "colorScheme": "MoonNarga",//颜色主题
                 // "cursorColor" : "#657B83",//光标颜色
                 "cursorShape": "bar",//光标形状
                 "fontFace" : "Fira Code",//字体
@@ -48,21 +49,21 @@
             {
                 "guid": "{61c54bbd-c2c6-5271-96e7-009a87ff34bf}",
                 "name": "Git Bash",
-                "commandline": "D://Environments/Tools/Git/bin/bash.exe",
+                "commandline": "C://Users/MoonN/Environment/Tools/Git/bin/bash.exe",
                 "hidden": false,
-                "startingDirectory": "D://Environments/repositories", // 启动的位置
+                "startingDirectory": "D://Workspace/Repos", // 启动的位置
                 "backgroundImage": "F:/PrPr/66855568_p0.jpg",
                 "backgroundImageOpacity": 0.5,
                 "backgroundImageStrechMode": "fill", //"none", "fill", "uniform", "uniformToFill"
                 "acrylicOpacity": 0.5, //不透明度
                 "closeOnExit": true, //
-                // "colorScheme" : "Solarized Light",//颜色主题
+                "colorScheme": "MoonNarga",
                 // "cursorColor" : "#657B83",//光标颜色
                 "cursorShape": "bar", //光标形状
                 // "fontFace" : "Sarasa Term SC",//字体
                 // "fontSize" : 12,
                 // "historySize" : 9001,
-                "icon": "D://Environments/Tools/Git/mingw64/share/git/git-for-windows.ico" //配置图标
+                "icon": "C://Users/MoonN/Environment/Tools/Git/mingw64/share/git/git-for-windows.ico" //配置图标
                 // "padding" : "0, 0, 0, 0",
                 // "snapOnInput" : true,
                 // "startingDirectory" : "%USERPROFILE%",
@@ -79,7 +80,7 @@
                 // "backgroundImageStrechMode": "fill",
                 "acrylicOpacity": 0.9, //不透明度
                 "closeOnExit": true, //
-                // "colorScheme" : "Solarized Light",//颜色主题
+                "colorScheme": "MoonNarga",
                 // "cursorColor" : "#657B83",//光标颜色
                 "cursorShape": "bar" //光标形状
                 // "fontFace" : "Sarasa Term SC",//字体
@@ -97,7 +98,7 @@
                 // "backgroundImageStrechMode": "fill",
                 "acrylicOpacity": 0.9, //不透明度
                 "closeOnExit": true, //
-                // "colorScheme" : "Solarized Light",//颜色主题
+                "colorScheme": "MoonNarga",
                 // "cursorColor" : "#657B83",//光标颜色
                 "cursorShape": "bar" //光标形状
                 // "fontFace" : "Sarasa Term SC",//字体
@@ -114,7 +115,7 @@
                 // "backgroundImageStrechMode": "fill",
                 "acrylicOpacity": 0.9, //不透明度
                 "closeOnExit": true, //
-                // "colorScheme" : "Solarized Light",//颜色主题
+                "colorScheme": "MoonNarga",
                 // "cursorColor" : "#657B83",//光标颜色
                 "cursorShape": "bar" //光标形状
                 // "fontFace" : "Sarasa Term SC",//字体
@@ -134,7 +135,7 @@
                 "useAcrylic": false,
                 "acrylicOpacity": 0.5, //不透明度
                 "closeOnExit": true, //
-                // "colorScheme" : "Solarized Light",//颜色主题
+                "colorScheme": "MoonNarga",
                 // "cursorColor" : "#657B83",//光标颜色
                 "cursorShape": "bar" //光标形状
                 // "fontFace" : "Sarasa Term SC",//字体
