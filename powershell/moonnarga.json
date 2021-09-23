@@ -3,29 +3,22 @@
   "blocks": [
     {
       "alignment": "left",
+      "newline": true,
       "segments": [
-        {
-          "background": "#51c4d3",
-          "foreground": "#100e23",
-          "powerline_symbol": "",
-          "style": "powerline",
-          "type": "envvar",
-          "properties": {
-      
-            "var_name": "CONDA_DEFAULT_ENV"
-          }
-        },
         {
           "background": "#ffe9aa",
           "foreground": "#100e23",
           "powerline_symbol": "",
           "style": "powerline",
-          "type": "root"
+          "type": "root",
+          "properties": {
+            "root_icon": "\uF0E7"
+          }
         },
         {
           "background": "#2c9678",
           "foreground": "#100e23",
-          "powerline_symbol": "",
+          "powerline_symbol": "<#2c9678></>",
           "style": "powerline",
           "type": "session"
         },
@@ -34,7 +27,7 @@
           "foreground": "#100e23",
           "powerline_symbol": "",
           "properties": {
-            "folder_icon": "",
+            "folder_icon": "📁",
             "folder_separator_icon": "  ",
             "style": "full"
           },
@@ -49,11 +42,11 @@
           "type": "git"
         },
         {
-          "background": "#906cff",
+          "background": "#51c4d3",
           "foreground": "#100e23",
           "powerline_symbol": "",
           "properties": {
-            "prefix": "  "
+            "prefix": " 🐍 "
           },
           "style": "powerline",
           "type": "python"
@@ -63,7 +56,7 @@
           "foreground": "#ffffff",
           "powerline_symbol": "",
           "properties": {
-            "prefix": " "
+            "prefix": "<#193549>\uE0B0</> \uE23A"
           },
           "style": "powerline",
           "type": "exit"
