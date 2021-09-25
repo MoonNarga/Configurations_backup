@@ -1,0 +1,43 @@
+# Rime schema
+# encoding: utf-8
+
+schema:
+  schema_id: greek
+  name: 希腊字母
+  version: "0.1"
+  author:
+    - AlephAlpha <alephalpha911@gmail.com>
+  description: |
+    输入希腊字母及其他数学符号。
+
+switches:
+  - name: ascii_mode
+    reset: 0
+    states: [ 希腊, 拉丁 ]
+
+engine:
+  processors:
+    - ascii_composer
+    - speller
+    - selector
+    - navigator
+    - express_editor
+  segmentors:
+    - ascii_segmentor
+    - abc_segmentor
+    - fallback_segmentor
+  translators:
+    - r10n_translator
+  filters:
+    - uniquifier
+
+speller:
+  alphabet: 'ZYXWVUTSRQPONMLKJIHGFEDCBAzyxwvutsrqponmlkjihgfedcba'
+  delimiter: " '"
+  algebra:
+    - derive/([A-Z])/\L$1/
+    
+translator:
+  dictionary: greek
+  enable_user_dict: false
+  spelling_hints: 1

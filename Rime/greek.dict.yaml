@@ -1,0 +1,117 @@
+# Rime dictionary
+# encoding: utf-8
+
+---
+name: greek
+version: "0.1"
+sort: original
+...
+
+# 小写希腊字母
+α	alpha
+β	beta
+γ	gamma
+δ	delta
+ε	epsilon
+ζ	zeta
+η	eta
+θ	theta
+ι	iota
+κ	kappa
+λ	lambda
+μ	mu
+ν	nu
+ξ	xi
+ο	omicron
+π	pi
+ρ	rho
+σ	sigma
+τ	tau
+υ	upsilon
+φ	phi
+χ	chi
+ψ	psi
+ω	omega
+
+# 大写希腊字母
+Α	Alpha
+Β	Beta
+Γ	Gamma
+Δ	Delta
+Ε	Epsilon
+Ζ	Zeta
+Η	Eta
+Θ	Theta
+Ι	Iota
+Κ	Kappa
+Λ	Lambda
+Μ	Mu
+Ν	Nu
+Ξ	Xi
+Ο	Omicron
+Π	Pi
+Ρ	Rho
+Σ	Sigma
+Τ	Tau
+Υ	Upsilon
+Φ	Phi
+Χ	Chi
+Ψ	Psi
+Ω	Omega
+
+# 希腊字母变体
+# 只收录用作数学符号的
+ϵ	epsilon
+ϑ	theta
+ϰ	kappa
+ϖ	pi
+ϱ	rho
+ς	sigma
+ϕ	phi
+Ϝ	Digamma
+ϝ	digamma
+
+# 其他数学符号
+# 主要参考的是 TeX
+# https://en.wikipedia.org/wiki/Help:Displaying_a_formula
+∂	partial
+∇	nabla
+∞	infty
+ℵ	aleph
+√	sqrt
+√	surd
+±	pm
+×	times
+÷	div
+∘	circ
+⊕	oplus
+⊗	otimes
+∅	empty
+∈	in
+∉	notin
+∋	ni
+∩	cap
+∪	cup
+⊂	subset
+⊃	supset
+⊆	subseteq
+⊇	supseteq
+≠	ne
+≡	equiv
+≅	cong
+≈	approx
+≤	le
+≥	ge
+∀	forall
+∃	exists
+∨	or
+∧	and
+∨	vee
+∧	wedge
+¬	neg
+→	to
+∑	sum
+∏	prod
+∐	coprod
+∫	int
+∮	oint
