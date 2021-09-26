@@ -37,7 +37,7 @@
                 "colorScheme": "MoonNarga",//颜色主题
                 // "cursorColor" : "#657B83",//光标颜色
                 "cursorShape": "bar",//光标形状
-                "fontFace" : "Fira Code",//字体
+                "fontFace" : "JetBrainsMono Nerd Font Mono",//字体
                 "fontSize" : 11
                 // "historySize" : 9001,
                 // "padding" : "0, 0, 0, 0",
