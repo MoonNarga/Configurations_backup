@@ -8,7 +8,6 @@ function unset_proxy {
     Remove-Item Env:https_proxy
 }
 
-Import-Module posh-git
 Import-Module oh-my-posh
 Set-PoshPrompt -Theme ~/.config/moonnarga.json
 

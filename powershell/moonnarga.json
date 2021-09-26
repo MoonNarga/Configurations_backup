@@ -35,11 +35,23 @@
           "type": "path"
         },
         {
-          "background": "#a4cab6",
-          "foreground": "#193549",
-          "powerline_symbol": "",
+          "type": "git",
           "style": "powerline",
-          "type": "git"
+          "powerline_symbol": "",
+          "foreground": "#000000",
+          "background": "#139c85",
+          "properties": {
+            "branch_icon": "\uF126 ",
+            "display_stash_count": true,
+            "display_upstream_icon": true,
+            "status_colors_enabled": true,
+            "display_status": true,
+            "local_changes_color": "#815aad",
+            "ahead_and_behind_color": "#f26d50",
+            "behind_color": "#4e9a06",
+            "ahead_color": "#89d1dc",
+            "stash_count_icon": "\uF692 "
+          }
         },
         {
           "background": "#51c4d3",
