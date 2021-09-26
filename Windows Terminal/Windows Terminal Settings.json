@@ -27,7 +27,7 @@
                 "name": "PowerShell 7",
                 // "source": "Windows.Terminal.PowershellCore",
                 "commandline": "pwsh.exe -nologo",
-                "startingDirectory": "D://Workspace/Repos", // 启动的位置
+                "startingDirectory": "D://Workspace", // 启动的位置
                 "backgroundImage": "F:/PrPr/66855568_p0.jpg",
                 "backgroundImageOpacity": 0.5,
                 "backgroundImageStrechMode": "fill", //"none", "fill", "uniform", "uniformToFill"
