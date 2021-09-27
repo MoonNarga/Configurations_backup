@@ -68,7 +68,7 @@
           "foreground": "#ffffff",
           "powerline_symbol": "",
           "properties": {
-            "prefix": "<#193549>\uE0B0</> \uE23A"
+            "prefix": " \uE23A"
           },
           "style": "powerline",
           "type": "exit"
