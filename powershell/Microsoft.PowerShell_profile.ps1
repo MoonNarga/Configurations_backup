@@ -9,6 +9,7 @@ function unset_proxy {
 }
 
 Import-Module oh-my-posh
+Import-Module PSReadline
 Set-PoshPrompt -Theme ~/.config/moonnarga.json
 
 Set-PSReadLineOption -PredictionSource History # 设置预测文本来源为历史记录
