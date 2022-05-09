@@ -8,9 +8,7 @@ function unset_proxy {
     Remove-Item Env:https_proxy
 }
 
-Import-Module oh-my-posh
 Import-Module PSReadline
-Set-PoshPrompt -Theme ~/.config/moonnarga.json
 
 Set-PSReadLineOption -PredictionSource History # 设置预测文本来源为历史记录
  
@@ -23,3 +21,4 @@ Set-PSReadLineKeyHandler -Key DownArrow -Function HistorySearchForward # 设置�
 Set-ExecutionPolicy RemoteSigned -Scope CurrentUser # Anaconda
 
 set_proxy
+oh-my-posh init pwsh --config ~/.config/moonnarga.json | Invoke-Expression
