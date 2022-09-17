@@ -8,6 +8,10 @@ function unset_proxy {
     Remove-Item Env:https_proxy
 }
 
+function sudo {
+    Start-Process wt -Verb runAs
+}
+
 Import-Module PSReadline
 
 Set-PSReadLineOption -PredictionSource History # 设置预测文本来源为历史记录

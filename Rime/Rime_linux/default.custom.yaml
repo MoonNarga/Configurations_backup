@@ -1,8 +1,9 @@
 customization:
-  distribution_code_name: Weasel
-  distribution_version: 0.14.3
-  generator: "Rime::SwitcherSettings"
-  modified_time: "Thu Apr  2 21:19:53 2020"
+  distribution_code_name: "ibus-rime"
+  distribution_name: Rime
+  distribution_version: 1.4.0
+  install_time: "Tue Jun 23 13:45:18 2020"
+  installation_id: "9b889102-ecb4-4521-ba49-f82edff55b1e"
   rime_version: 1.5.3
 patch:
   schema_list:
@@ -12,6 +13,10 @@ patch:
 
   switcher/hotkeys:
     - Control+period
+    
+  ascii_composer/switch_key:
+        Shift_L: commit_code
+        Shift_R: commit_code
 
   key_binder/bindings:
     - { when: always, accept: Shift+space, toggle: full_shape }
