@@ -212,7 +212,6 @@ patch:
     Sync: {label: 同步, command: broadcast, option: "com.osfans.trime.sync"}
 
   "preset_keyboards/wubi_moonnarga_pinyin/import_preset": qwerty_MoonNarga
-  "preset_keyboards/.default/keys/@33/long_click": Keyboard_DURL
 
   "preset_keyboards/DURL": #布局ID
     author: "MoonNarga" #作者
@@ -278,33 +277,43 @@ patch:
     key_press_offset_x: 2
     key_press_offset_y: 2
     keys:
-    - {click: 'q', long_click: '!', swipe_up: 1}
-    - {click: 'w', long_click: '@', swipe_up: 2}
-    - {click: 'e', long_click: '#', swipe_up: 3}
-    - {click: 'r', long_click: '$', swipe_up: 4}
-    - {click: 't', long_click: '%', swipe_up: 5}
-    - {click: 'y', long_click: '^', swipe_up: 6}
-    - {click: 'u', long_click: '&', swipe_up: 7}
-    - {click: 'i', long_click: '*', swipe_up: 8}
-    - {click: 'o', long_click: '(){Left}', swipe_up: 9}
-    - {click: 'p', long_click: 'Hide', swipe_up: 0}
+    - {click: '1', long_click: '!', height: 45}
+    - {click: '2', long_click: '@', height: 45}
+    - {click: '3', long_click: '#', height: 45}
+    - {click: '4', long_click: '$', height: 45}
+    - {click: '5', long_click: '%', height: 45}
+    - {click: '6', long_click: '^', height: 45}
+    - {click: '7', long_click: '&', height: 45}
+    - {click: '8', long_click: '*', height: 45}
+    - {click: '9', long_click: '(', height: 45}
+    - {click: '0', long_click: ')', height: 45}
+    - {click: 'q', long_click: '_'}
+    - {click: 'w', long_click: '-'}
+    - {click: 'e', long_click: '+'}
+    - {click: 'r', long_click: '='}
+    - {click: 't', long_click: '|'}
+    - {click: 'y', long_click: '\'}
+    - {click: 'u', long_click: '['}
+    - {click: 'i', long_click: ']'}
+    - {click: 'o', long_click: '{'}
+    - {click: 'p', long_click: '}'}
     - {width: 5}
-    - {click: 'a', long_click: select_all}
-    - {click: 's', long_click: '`', swipe_up: '~'}
-    - {click: 'd', long_click: '-', swipe_up: '_'}
-    - {click: 'f', long_click: '=', swipe_up: '+'}
-    - {click: 'g', swipe_left: Home, swipe_right: End, swipe_up: Page_Up, swipe_down: Page_Down}
-    - {click: 'h', long_click: '[]{Left}', swipe_left: '[', swipe_right: ']'}
-    - {click: 'j', long_click: '{}{Left}', swipe_left: '{', swipe_right: '}'}
-    - {click: 'k', long_click: ';', swipe_up: ':'}
-    - {click: 'l', long_click: '\', swipe_up: '|'}
+    - {click: 'a', long_click: select_all }
+    - {click: 's', long_click: undo}
+    - {click: 'd', long_click: redo}
+    - {click: 'f', long_click: Home}
+    - {click: 'g', long_click: End}
+    - {click: 'h', long_click: Left}
+    - {click: 'j', long_click: Right}
+    - {click: 'k', long_click: ':'}
+    - {click: 'l', long_click: ';'}
     - {width: 5}
     - {click: Shift_L, swipe_up: Punct_switch, swipe_right: Henkan, swipe_down: Charset_switch, send_bindings: false, width: 15}
-    - {click: 'z', swipe_left: undo, swipe_right: redo}
+    - {click: 'z', long_click: '`'}
     - {click: 'x', long_click: cut}
     - {click: 'c', long_click: copy}
     - {click: 'v', long_click: paste}
-    - {click: 'b', long_click: Time, swipe_up: Date}
+    - {click: 'b', long_click: '~'}
     - {click: 'n', long_click: '"'}
     - {click: 'm', long_click: "'"}
     - {click: BackSpace, swipe_left: Escape, width: 15}
