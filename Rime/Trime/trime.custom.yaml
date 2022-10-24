@@ -308,7 +308,7 @@ patch:
     - {click: 'k', long_click: ':'}
     - {click: 'l', long_click: ';'}
     - {width: 5}
-    - {click: Shift_L, swipe_up: Punct_switch, swipe_right: Henkan, swipe_down: Charset_switch, send_bindings: false, width: 15}
+    - {click: Shift_L, swipe_up: Punct_switch, swipe_right: Henkan, swipe_down: Charset_switch, send_bindings: false, width: 12}
     - {click: 'z', long_click: '`'}
     - {click: 'x', long_click: cut}
     - {click: 'c', long_click: copy}
@@ -316,7 +316,7 @@ patch:
     - {click: 'b', long_click: '~'}
     - {click: 'n', long_click: '"'}
     - {click: 'm', long_click: "'"}
-    - {click: BackSpace, swipe_left: Escape, width: 15}
+    - {click: BackSpace, swipe_left: Escape, width: 18}
     - {click: Mode_switch, long_click: Menu, width: 12}
     - {click: Keyboard_symbols, long_click: Keyboard_number, width: 13}
     - {click: ',', long_click: '<'}
