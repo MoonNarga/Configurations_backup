@@ -264,6 +264,52 @@ patch:
     name: MoonNarga
     author: "MoonNarga <MoonNarga@outlook.com>"
     ascii_mode: 0
+    width: 10
+    height: 55
+    lock: true
+    keys:
+    - {click: 'q', long_click: '!'}
+    - {click: 'w', long_click: '@'}
+    - {click: 'e', long_click: '#'}
+    - {click: 'r', long_click: '$'}
+    - {click: 't', long_click: '%'}
+    - {click: 'y', long_click: '^'}
+    - {click: 'u', long_click: '&'}
+    - {click: 'i', long_click: '*'}
+    - {click: 'o', long_click: '('}
+    - {click: 'p', long_click: ')'}
+    - {width: 5}
+    - {click: 'a', long_click: select_all}
+    - {click: 's', long_click: undo}
+    - {click: 'd', long_click: redo}
+    - {click: 'f', long_click: Home}
+    - {click: 'g', long_click: End}
+    - {click: 'h', long_click: Left}
+    - {click: 'j', long_click: Right}
+    - {click: 'k', long_click: '"'}
+    - {click: 'l', long_click: "'"}
+    - {width: 5}
+    - {click: Shift_L, swipe_up: Punct_switch, swipe_right: Henkan, swipe_down: Charset_switch, send_bindings: false, width: 12}
+    - {click: 'z', long_click: '`'}
+    - {click: 'x', long_click: cut}
+    - {click: 'c', long_click: copy}
+    - {click: 'v', long_click: paste}
+    - {click: 'b', long_click: '~'}
+    - {click: 'n', long_click: ':'}
+    - {click: 'm', long_click: ';'}
+    - {click: BackSpace, swipe_left: Escape, width: 18}
+    - {click: Mode_switch, long_click: Menu, width: 12}
+    - {click: Keyboard_symbols, long_click: Keyboard_number, width: 13}
+    - {click: ',', long_click: '<'}
+    - {click: space, long_click: Keyboard_DURL, width: 30}
+    - {click: '.', long_click: '>'}
+    - {click: '/', long_click: '?'}
+    - {click: Return, long_click: CommitComment, width: 15}
+
+  "preset_keyboards/qwerty_with_number_MoonNarga":
+    name: MoonNarga
+    author: "MoonNarga <MoonNarga@outlook.com>"
+    ascii_mode: 0
     columns: 10 #鍵盤列數，超過則自動換行，默認30列
     width: 10
     height: 55
