@@ -50,7 +50,7 @@ patch:
     key_long_text_size: 14 #長標籤字號
     key_text_size: 22 #鍵字號
     key_width: 10.0 #鍵寬，佔螢幕寬的百分比
-    keyboards: [.default, qwerty_MoonNarga, letter, number, symbols, DURL] #鍵盤配置：自動鍵盤、字母、數字、符號
+    keyboards: [.default, qwerty_MoonNarga, letter, number, symbols, DURL, Symbols_edit, Number_edit] #鍵盤配置：自動鍵盤、字母、數字、符號
     label_text_size: 22 #標籤字號
     label_font: label.ttf #編標籤字型
     latin_font: latin.ttf #西文字型
@@ -179,6 +179,8 @@ patch:
     Keyboard_default: {label: 返回, send: Eisu_toggle, select: .default}
     Keyboard_switch: {label: 键盘, send: Eisu_toggle, select: .next}
     Keyboard_DURL: {label: DURL, send: Eisu_toggle, select: DURL}
+    Keyboard_Symbols_edit: {label: 符号, send: Eisu_toggle, select: Symbols_edit}
+    Keyboard_Number_edit: {label: 数字, send: Eisu_toggle, select: Number_edit}
     Schema_switch: {label: 下一方案, send: Control+Shift+1}
     Color_switch: {label: 配色, send: PROG_RED}
     Help: {label: 说明, send: Help}
@@ -259,6 +261,92 @@ patch:
       - { click: space, width: 18 }
       - { click: ., width: 18 }
       - { click: Return, width: 18 }
+  
+  "preset_keyboards/Number_edit":
+    name: "number_edit"
+    author: "MoonNarga"
+    width: 20
+    height: 44
+    keys:
+      - {click: '+'}
+      - {click: '1'}
+      - {click: '2'}
+      - {click: '3'}
+      - {click: '#'}
+      - {click: '-'}
+      - {click: '4'}
+      - {click: '5'}
+      - {click: '6'}
+      - {click: '%'}
+      - {click: '*'}
+      - {click: '7'}
+      - {click: '8'}
+      - {click: '9'}
+      - {click: ':'}
+      - {click: '/'}
+      - {click: '±'}
+      - {click: '0'}
+      - {click: '.'}
+      - {click: ','}
+      - {click: '='}
+      - {click: Keyboard_default, long_click: Keyboard_Symbols_edit}
+      - {click: space}
+      - {click: BackSpace}
+      - {click: Return}
+
+  "preset_keyboards/Symbols_edit":
+    name: "symbols_edit"
+    author: "MoonNarga"
+    ascii_mode: 1
+    width: 10
+    height: 44
+    keys:
+      - {click: '1'}
+      - {click: '2'}
+      - {click: '3'}
+      - {click: '4'}
+      - {click: '5'}
+      - {click: '6'}
+      - {click: '7'}
+      - {click: '8'}
+      - {click: '9'}
+      - {click: '0'}
+      - {click: '~',long_click: '`'}
+      - {click: '!'}
+      - {click: '@'}
+      - {click: '#'}
+      - {click: '$'}
+      - {click: '￥'}
+      - {click: '%'}
+      - {click: '^'}
+      - {click: '&'}
+      - {click: '*'}
+      - {click: '(', long_click: '{'}
+      - {click: ')', long_click: '}'}
+      - {click: '[', long_click: '【'}
+      - {click: ']', long_click: '】'}
+      - {click: '「', long_click: '『'}
+      - {click: '」', long_click: '』'}
+      - {click: '、', ascii: '\', long_click: '|'}
+      - {click: '/', long_click: '√'}
+      - {click: ':'}
+      - {click: ';'}
+      - {click: '+'}
+      - {click: '-', long_click: '_'}
+      - {click: '='}
+      - {click: '〈', long_click: '《', ascii: '<'}
+      - {click: '〉', long_click: '》', ascii: '>'}
+      - {click: '“', ascii: '"', long_click: '‘'}
+      - {click: '”', ascii: "'", long_click: '’'}
+      - {click: '，', ascii: ','}
+      - {click: '？', ascii: '?'}
+      - {click: BackSpace, long_click: Escape}
+      - {click: Keyboard_default, long_click: Menu, width: 15}
+      - {click: Keyboard_Number_edit, long_click: Color_switch}
+      - {click: space, width: 40}
+      - {click: '。', ascii: '.'}
+      - {click: Hide, long_click: Delete}
+      - {click: Return, long_click: select_all, width: 15}
 
   "preset_keyboards/qwerty_MoonNarga":
     name: MoonNarga
@@ -268,43 +356,43 @@ patch:
     height: 55
     lock: true
     keys:
-    - {click: 'q', long_click: '!'}
-    - {click: 'w', long_click: '@'}
-    - {click: 'e', long_click: '#'}
-    - {click: 'r', long_click: '$'}
-    - {click: 't', long_click: '%'}
-    - {click: 'y', long_click: '^'}
-    - {click: 'u', long_click: '&'}
-    - {click: 'i', long_click: '*'}
-    - {click: 'o', long_click: '('}
-    - {click: 'p', long_click: ')'}
-    - {width: 5}
-    - {click: 'a', long_click: select_all}
-    - {click: 's', long_click: undo}
-    - {click: 'd', long_click: redo}
-    - {click: 'f', long_click: Home}
-    - {click: 'g', long_click: End}
-    - {click: 'h', long_click: Left}
-    - {click: 'j', long_click: Right}
-    - {click: 'k', long_click: '"'}
-    - {click: 'l', long_click: "'"}
-    - {width: 5}
-    - {click: Shift_L, swipe_up: Punct_switch, swipe_right: Henkan, swipe_down: Charset_switch, send_bindings: false, width: 12}
-    - {click: 'z', long_click: '`'}
-    - {click: 'x', long_click: cut}
-    - {click: 'c', long_click: copy}
-    - {click: 'v', long_click: paste}
-    - {click: 'b', long_click: '~'}
-    - {click: 'n', long_click: ':'}
-    - {click: 'm', long_click: ';'}
-    - {click: BackSpace, swipe_left: Escape, width: 18}
-    - {click: Mode_switch, long_click: Menu, width: 12}
-    - {click: Keyboard_symbols, long_click: Keyboard_number, width: 13}
-    - {click: ',', long_click: '<'}
-    - {click: space, long_click: Keyboard_DURL, width: 30}
-    - {click: '.', long_click: '>'}
-    - {click: '/', long_click: '?'}
-    - {click: Return, long_click: CommitComment, width: 15}
+      - {click: 'q', long_click: '!'}
+      - {click: 'w', long_click: '@'}
+      - {click: 'e', long_click: '#'}
+      - {click: 'r', long_click: '$'}
+      - {click: 't', long_click: '%'}
+      - {click: 'y', long_click: '^'}
+      - {click: 'u', long_click: '&'}
+      - {click: 'i', long_click: '*'}
+      - {click: 'o', long_click: '('}
+      - {click: 'p', long_click: ')'}
+      - {width: 5}
+      - {click: 'a', long_click: select_all}
+      - {click: 's', long_click: undo}
+      - {click: 'd', long_click: redo}
+      - {click: 'f', long_click: Home}
+      - {click: 'g', long_click: End}
+      - {click: 'h', long_click: Left}
+      - {click: 'j', long_click: Right}
+      - {click: 'k', long_click: '"'}
+      - {click: 'l', long_click: "'"}
+      - {width: 5}
+      - {click: Shift_L, swipe_up: Punct_switch, swipe_right: Henkan, swipe_down: Charset_switch, send_bindings: false, width: 12}
+      - {click: 'z', long_click: '`'}
+      - {click: 'x', long_click: cut}
+      - {click: 'c', long_click: copy}
+      - {click: 'v', long_click: paste}
+      - {click: 'b', long_click: '~'}
+      - {click: 'n', long_click: ':'}
+      - {click: 'm', long_click: ';'}
+      - {click: BackSpace, swipe_left: Escape, width: 18}
+      - {click: Keyboard_Symbols_edit, long_click: Keyboard_Number_edit, width: 13}
+      - {click: Mode_switch, long_click: Menu, width: 12}
+      - {click: ',', long_click: '<'}
+      - {click: space, long_click: Keyboard_DURL, width: 30}
+      - {click: '.', long_click: '>'}
+      - {click: '/', long_click: '?'}
+      - {click: Return, long_click: CommitComment, width: 15}
 
   "preset_keyboards/qwerty_with_number_MoonNarga":
     name: MoonNarga
@@ -323,50 +411,50 @@ patch:
     key_press_offset_x: 2
     key_press_offset_y: 2
     keys:
-    - {click: '1', long_click: '!', height: 45}
-    - {click: '2', long_click: '@', height: 45}
-    - {click: '3', long_click: '#', height: 45}
-    - {click: '4', long_click: '$', height: 45}
-    - {click: '5', long_click: '%', height: 45}
-    - {click: '6', long_click: '^', height: 45}
-    - {click: '7', long_click: '&', height: 45}
-    - {click: '8', long_click: '*', height: 45}
-    - {click: '9', long_click: '(', height: 45}
-    - {click: '0', long_click: ')', height: 45}
-    - {click: 'q', long_click: '_'}
-    - {click: 'w', long_click: '-'}
-    - {click: 'e', long_click: '+'}
-    - {click: 'r', long_click: '='}
-    - {click: 't', long_click: '|'}
-    - {click: 'y', long_click: '\'}
-    - {click: 'u', long_click: '['}
-    - {click: 'i', long_click: ']'}
-    - {click: 'o', long_click: '{'}
-    - {click: 'p', long_click: '}'}
-    - {width: 5}
-    - {click: 'a', long_click: select_all }
-    - {click: 's', long_click: undo}
-    - {click: 'd', long_click: redo}
-    - {click: 'f', long_click: Home}
-    - {click: 'g', long_click: End}
-    - {click: 'h', long_click: Left}
-    - {click: 'j', long_click: Right}
-    - {click: 'k', long_click: ':'}
-    - {click: 'l', long_click: ';'}
-    - {width: 5}
-    - {click: Shift_L, swipe_up: Punct_switch, swipe_right: Henkan, swipe_down: Charset_switch, send_bindings: false, width: 12}
-    - {click: 'z', long_click: '`'}
-    - {click: 'x', long_click: cut}
-    - {click: 'c', long_click: copy}
-    - {click: 'v', long_click: paste}
-    - {click: 'b', long_click: '~'}
-    - {click: 'n', long_click: '"'}
-    - {click: 'm', long_click: "'"}
-    - {click: BackSpace, swipe_left: Escape, width: 18}
-    - {click: Mode_switch, long_click: Menu, width: 12}
-    - {click: Keyboard_symbols, long_click: Keyboard_number, width: 13}
-    - {click: ',', long_click: '<'}
-    - {click: space, long_click: Keyboard_DURL, width: 30}
-    - {click: '.', long_click: '>'}
-    - {click: '/', long_click: '?'}
-    - {click: Return, long_click: CommitComment, width: 15}
+      - {click: '1', long_click: '!', height: 45}
+      - {click: '2', long_click: '@', height: 45}
+      - {click: '3', long_click: '#', height: 45}
+      - {click: '4', long_click: '$', height: 45}
+      - {click: '5', long_click: '%', height: 45}
+      - {click: '6', long_click: '^', height: 45}
+      - {click: '7', long_click: '&', height: 45}
+      - {click: '8', long_click: '*', height: 45}
+      - {click: '9', long_click: '(', height: 45}
+      - {click: '0', long_click: ')', height: 45}
+      - {click: 'q', long_click: '_'}
+      - {click: 'w', long_click: '-'}
+      - {click: 'e', long_click: '+'}
+      - {click: 'r', long_click: '='}
+      - {click: 't', long_click: '|'}
+      - {click: 'y', long_click: '\'}
+      - {click: 'u', long_click: '['}
+      - {click: 'i', long_click: ']'}
+      - {click: 'o', long_click: '{'}
+      - {click: 'p', long_click: '}'}
+      - {width: 5}
+      - {click: 'a', long_click: select_all }
+      - {click: 's', long_click: undo}
+      - {click: 'd', long_click: redo}
+      - {click: 'f', long_click: Home}
+      - {click: 'g', long_click: End}
+      - {click: 'h', long_click: Left}
+      - {click: 'j', long_click: Right}
+      - {click: 'k', long_click: ':'}
+      - {click: 'l', long_click: ';'}
+      - {width: 5}
+      - {click: Shift_L, swipe_up: Punct_switch, swipe_right: Henkan, swipe_down: Charset_switch, send_bindings: false, width: 12}
+      - {click: 'z', long_click: '`'}
+      - {click: 'x', long_click: cut}
+      - {click: 'c', long_click: copy}
+      - {click: 'v', long_click: paste}
+      - {click: 'b', long_click: '~'}
+      - {click: 'n', long_click: '"'}
+      - {click: 'm', long_click: "'"}
+      - {click: BackSpace, swipe_left: Escape, width: 18}
+      - {click: Keyboard_Symbols_edit, long_click: Keyboard_Number_edit, width: 13}
+      - {click: Mode_switch, long_click: Menu, width: 12}
+      - {click: ',', long_click: '<'}
+      - {click: space, long_click: Keyboard_DURL, width: 30}
+      - {click: '.', long_click: '>'}
+      - {click: '/', long_click: '?'}
+      - {click: Return, long_click: CommitComment, width: 15}
