@@ -408,8 +408,8 @@ patch:
       - {click: 'd', long_click: redo}
       - {click: 'f', long_click: Home}
       - {click: 'g', long_click: End}
-      - {click: 'h', long_click: Left}
-      - {click: 'j', long_click: Right}
+      - {click: 'h', long_click: '，'}
+      - {click: 'j', long_click: '。'}
       - {click: 'k', long_click: '"'}
       - {click: 'l', long_click: "'"}
       - {width: 5}
@@ -424,9 +424,9 @@ patch:
       - {click: BackSpace, swipe_left: Escape, width: 18}
       - {click: Keyboard_Symbols_edit, long_click: Keyboard_Number_edit, width: 13}
       - {click: Mode_switch, long_click: Menu, width: 12}
-      - {click: ',', long_click: '<'}
+      - {click: Left, long_click: ','}
       - {click: space, long_click: Keyboard_DURL, width: 30}
-      - {click: '.', long_click: '>'}
+      - {click: Right, long_click: '.'}
       - {click: '/', long_click: '?'}
       - {click: Return, long_click: CommitComment, width: 15}
 
