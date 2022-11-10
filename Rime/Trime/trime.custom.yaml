@@ -6,7 +6,7 @@ patch:
     auto_caps: false #自動句首大寫:true|false|ascii
     background_dim_amount: 0.5
     candidate_font: HYKaiTiS.ttf #候選字型
-    candidate_padding: 10 #候選項內邊距
+    candidate_padding: 20 #候選項內邊距
     candidate_spacing: 15 #候選間距
     candidate_text_size: 22 #候選字號
     candidate_use_cursor: true #高亮候選項
@@ -31,7 +31,7 @@ patch:
       max_height: 400 #最大高度
       min_width: 40 #最小寬度
       min_height: 0 #最小高度
-      margin_x: 5 #水平邊距
+      margin_x: 25 #水平邊距
       margin_y: 5 #豎直邊距
       line_spacing: 0 #候选詞的行間距(px)
       line_spacing_multiplier: 1.2 #候选詞的行間距(倍數)
@@ -74,6 +74,42 @@ patch:
     vertical_gap: 6 #鍵盤行距
     # keyboard_height: 600
     # keyboard_height_land: 300
+
+  "preset_color_schemes/NianNian_BoBo": #配色方案ID
+    name: "芋泥草莓啵啵雪媚娘"
+    author: gan_niannian
+    back_color: 0xFEFBFE #候選區背景
+    border_color: 0xAB9ED9 #邊框
+    candidate_separator_color: 0xFEFBFE #候選分割背景
+    candidate_text_color: 0xB0568C #候選文字
+    comment_text_color: 0xB0568C #提示
+    hilited_back_color: 0xC3BCC6 #標明編碼背景
+    hilited_candidate_back_color: 0xFEEBFE #標明候選背景
+    hilited_candidate_text_color: 0xB0568C #標明候選文字
+    # hilited_comment_text_color: 0x000000 #標明提示
+    # hilited_key_back_color: 0xd3d7da #標明按鍵背景
+    # hilited_key_symbol_color: 0x000000 #標明按鍵符號
+    # hilited_key_text_color: 0x000000 #標明按鍵文字
+    # hilited_off_key_back_color: 0xd3d7da #標明按鍵關閉狀態背景
+    # hilited_off_key_text_color: 0x000000 #標明按鍵關閉狀態文字
+    # hilited_on_key_back_color: 0xd3d7da #標明按鍵打開狀態背景
+    # hilited_on_key_text_color: 0x000000 #標明按鍵打開狀態文字
+    hilited_text_color: 0xB0568C #標明編碼
+    key_back_color: 0xFEFBFE #按鍵背景
+    # key_border_color: 0xAB9ED9 #按鍵邊框
+    # key_symbol_color: 0x5f6b73 #按鍵符號
+    key_text_color: 0xAB9ED9 #按鍵文字
+    keyboard_back_color: 0xFEFBFE #鍵盤背景
+    # label_color: 0x000000 #標籤
+    # off_key_back_color: 0xc6e6e8 #按鍵關閉狀態背景
+    # off_key_text_color: 0x000000 #按鍵關閉狀態文字
+    # on_key_back_color: 0x23948e #按鍵打開狀態背景
+    # on_key_text_color: 0x37474f #按鍵打開狀態文字
+    preview_back_color: 0xFEEBFE #按鍵提示背景
+    # preview_text_color: 0x23948e #按鍵提示文字
+    # shadow_color: 0x000000 #按鍵文字陰影
+    text_color: 0xB0568C #編碼
+    text_back_color: 0xFEFBFE #編碼區背景
 
   "preset_color_schemes/moonnarga": #配色方案ID
     name: "MoonNarga"
@@ -340,9 +376,9 @@ patch:
       - {click: '”', ascii: "'", long_click: '’'}
       - {click: '，', ascii: ','}
       - {click: '？', ascii: '?'}
-      - {click: BackSpace, long_click: Escape}
+      - {click: BackSpace}
       - {click: Keyboard_default, long_click: Menu, width: 15}
-      - {click: Keyboard_Number_edit, long_click: Color_switch}
+      - {click: Keyboard_Number_edit, long_click: Mode_switch}
       - {click: space, width: 40}
       - {click: '。', ascii: '.'}
       - {click: Hide, long_click: Delete}

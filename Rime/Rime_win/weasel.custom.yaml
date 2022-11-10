@@ -6,7 +6,7 @@ customization:
   rime_version: 1.5.3
 patch:
   "style/horizontal": true
-  "style/color_scheme": MoonNarga
+  "style/color_scheme": NianNian_BoBo
   "preset_color_schemes/MoonNarga":
     name: MoonNarga
     author: MoonNarga
@@ -19,3 +19,16 @@ patch:
     hilited_candidate_back_color: 0x94A769
     candidate_text_color: 0x23225C
     comment_text_color: 0x000000
+
+  "preset_color_schemes/NianNian_BoBo":
+    name: "芋泥草莓啵啵雪媚娘"
+    author: gan_niannian
+    back_color: 0xFEFBFE
+    border_color: 0xAB9ED9
+    text_color: 0xB0568C
+    hilited_text_color: 0xB0568C
+    hilited_back_color: 0xC3BCC6
+    hilited_candidate_text_color: 0xB0568C
+    hilited_candidate_back_color: 0xAB9ED9
+    candidate_text_color: 0xB0568C
+    comment_text_color: 0xB0568C
