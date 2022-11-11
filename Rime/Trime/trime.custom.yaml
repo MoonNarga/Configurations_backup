@@ -418,9 +418,9 @@ patch:
       - {click: 'x', long_click: cut}
       - {click: 'c', long_click: copy}
       - {click: 'v', long_click: paste}
-      - {click: 'b', long_click: ','}
-      - {click: 'n', long_click: '.'}
-      - {click: 'm', long_click: '?'}
+      - {click: 'b', long_click: '~'}
+      - {click: 'n', long_click: ','}
+      - {click: 'm', long_click: '.'}
       - {click: BackSpace, swipe_left: Escape, width: 18}
       - {click: Keyboard_Symbols_edit, long_click: Keyboard_Number_edit, width: 13}
       - {click: Mode_switch, long_click: Menu, width: 12}
