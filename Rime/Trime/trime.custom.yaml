@@ -249,7 +249,7 @@ patch:
     Deploy: {label: 部署, command: broadcast, option: "com.osfans.trime.deploy"}
     Sync: {label: 同步, command: broadcast, option: "com.osfans.trime.sync"}
 
-  "preset_keyboards/wubi_moonnarga_pinyin/import_preset": qwerty_MoonNarga
+  "preset_keyboards/wubi_moonnarga/import_preset": qwerty_MoonNarga
 
   "preset_keyboards/DURL": #布局ID
     author: "MoonNarga" #作者
@@ -404,10 +404,10 @@ patch:
       - {click: 'p', long_click: ')'}
       - {width: 5}
       - {click: 'a', long_click: select_all}
-      - {click: 's', long_click: undo}
-      - {click: 'd', long_click: redo}
-      - {click: 'f', long_click: Home}
-      - {click: 'g', long_click: End}
+      - {click: 's', long_click: '~'}
+      - {click: 'd', long_click: '-'}
+      - {click: 'f', long_click: '+'}
+      - {click: 'g', long_click: '\'}
       - {click: 'h', long_click: '"'}
       - {click: 'j', long_click: "'"}
       - {click: 'k', long_click: ':'}
@@ -418,7 +418,7 @@ patch:
       - {click: 'x', long_click: cut}
       - {click: 'c', long_click: copy}
       - {click: 'v', long_click: paste}
-      - {click: 'b', long_click: '~'}
+      - {click: 'b', long_click: '_'}
       - {click: 'n', long_click: ','}
       - {click: 'm', long_click: '.'}
       - {click: BackSpace, swipe_left: Escape, width: 18}
