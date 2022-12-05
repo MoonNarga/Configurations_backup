@@ -1,2 +1,3 @@
 patch:
   __include: easy_en:/patch
+  easy_en/enable_sentence: false
