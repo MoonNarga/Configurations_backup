@@ -9,7 +9,7 @@ patch:
   schema_list:
     - { schema: luna_pinyin }
     - { schema: double_pinyin }
-    - { schema: wubi_moonnarga_pinyin }
+    - { schema: wubi_moonnarga }
 
   switcher/hotkeys:
     - Control+period
@@ -85,7 +85,7 @@ patch:
       "\\": "、"
       "]": "]"
       "^": "^"
-      _: "——"
+      _: "_"
       "`": "`"
       "{": "{"
       "|": "|"
