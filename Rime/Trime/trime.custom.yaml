@@ -7,7 +7,7 @@ patch:
     background_dim_amount: 0.5
     candidate_font: HYKaiTiS.ttf #候選字型
     candidate_padding: 20 #候選項內邊距
-    candidate_spacing: 15 #候選間距
+    candidate_spacing: 10 #候選間距
     candidate_text_size: 22 #候選字號
     candidate_use_cursor: true #高亮候選項
     candidate_view_height: 28 #候選區高度
@@ -388,46 +388,82 @@ patch:
     name: MoonNarga
     author: "MoonNarga <MoonNarga@outlook.com>"
     ascii_mode: 0
-    width: 10
+    width: 8
     height: 55
     lock: true
     keys:
+      - {width: 2, height: 60}
       - {click: 'q', long_click: '!'}
+      - {width: 2, height: 60}
       - {click: 'w', long_click: '@'}
+      - {width: 2, height: 60}
       - {click: 'e', long_click: '#'}
+      - {width: 2, height: 60}
       - {click: 'r', long_click: '$'}
+      - {width: 2, height: 60}
       - {click: 't', long_click: '%'}
+      - {width: 2, height: 60}
       - {click: 'y', long_click: '^'}
+      - {width: 2, height: 60}
       - {click: 'u', long_click: '&'}
+      - {width: 2, height: 60}
       - {click: 'i', long_click: '*'}
+      - {width: 2, height: 60}
       - {click: 'o', long_click: '('}
+      - {width: 2, height: 60}
       - {click: 'p', long_click: ')'}
-      - {width: 5}
+      - {width: 2, height: 60}
+      - {width: 102, height: 2}
+
+
+      - {width: 7, height: 60}
       - {click: 'a', long_click: select_all}
+      - {width: 2, height: 60}
       - {click: 's', long_click: '~'}
+      - {width: 2, height: 60}
       - {click: 'd', long_click: '-'}
+      - {width: 2, height: 60}
       - {click: 'f', long_click: '+'}
+      - {width: 2, height: 60}
       - {click: 'g', long_click: '\'}
+      - {width: 2, height: 60}
       - {click: 'h', long_click: '"'}
+      - {width: 2, height: 60}
       - {click: 'j', long_click: "'"}
+      - {width: 2, height: 60}
       - {click: 'k', long_click: ':'}
+      - {width: 2, height: 60}
       - {click: 'l', long_click: ";"}
-      - {width: 5}
-      - {click: Shift_L, swipe_up: Punct_switch, swipe_right: Henkan, swipe_down: Charset_switch, send_bindings: false, width: 12}
+      - {width: 7, height: 60}
+      - {width: 102, height: 2}
+      
+      - {click: Shift_L, swipe_up: Punct_switch, swipe_right: Henkan, swipe_down: Charset_switch, send_bindings: false, width: 12, height: 60}
+      - {width: 2, height: 60}
       - {click: 'z', long_click: '`'}
+      - {width: 2, height: 60}
       - {click: 'x', long_click: cut}
+      - {width: 2, height: 60}
       - {click: 'c', long_click: copy}
+      - {width: 2, height: 60}
       - {click: 'v', long_click: paste}
+      - {width: 2, height: 60}
       - {click: 'b', long_click: '_'}
+      - {width: 2, height: 60}
       - {click: 'n', long_click: ','}
+      - {width: 2, height: 60}
       - {click: 'm', long_click: '.'}
-      - {click: BackSpace, swipe_left: Escape, width: 18}
+      - {width: 2, height: 60}
+      - {click: BackSpace, swipe_left: Escape, width: 16}
+      - {width: 102, height: 2}
       - {click: Keyboard_Symbols_edit, long_click: Keyboard_Number_edit, width: 13}
       - {click: Mode_switch, long_click: Menu, width: 12}
-      - {click: Left}
-      - {click: space, long_click: Keyboard_DURL, width: 30}
-      - {click: Right}
-      - {click: '/', long_click: '?'}
+      - {width: 1, height: 60}
+      - {click: Left, width: 11}
+      - {click: space, long_click: Keyboard_DURL, width: 26}
+      - {click: Right, width: 11}
+      - {width: 1, height: 60}
+      - {click: '/', long_click: '?', width: 8}
+      - {width: 2, height: 60}
       - {click: Return, long_click: CommitComment, width: 15}
 
   "preset_keyboards/qwerty_with_number_MoonNarga":
