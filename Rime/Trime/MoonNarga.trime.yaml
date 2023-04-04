@@ -1,0 +1,854 @@
+# MoonNarga.trime.yaml
+# encoding: utf-8
+config_version: "1.0"
+name: MoonNarga          #方案名称
+author: MoonNarga       #作者信息
+
+#界面风格、功能开关
+style:
+  auto_caps: false #自動句首大寫:true|false|ascii
+  background_dim_amount: 0.5
+  root_background: keyboard_back_color # 整个键盘区+候选栏的背景图/色
+  liquid_keyboard_switch: { toggle: _liquid_keyboard, send: Mode_switch, states: [ 更多, 更多 ] }
+  liquid_keyboard_clipboard: {label: 剪贴板, send: function, command: liquid_keyboard, option: "剪贴"}
+  handwriting: {toggle: _handwriting, send: Mode_switch, states: [ 手写, 手写 ] }
+  handwriting1: {toggle: _handwriting, send: Mode_switch, states: [ 写, 写 ] }
+  candidate_font: HYKaiTiS.ttf #候选字型
+  candidate_padding: 26 #候选项内边距
+  candidate_spacing: 0 #候选间距
+  candidate_text_size: 20 #候选字号
+  candidate_use_cursor: true #高亮候选项
+  candidate_view_height: 28 #候选区高度
+  color_scheme: default #配色方案
+  comment_font: HYKaiTiS.ttf #编码提示字型
+  comment_height: 15 #编码提示区高度
+  comment_on_top: true #编码提示在上方或右侧
+  comment_text_size: 13 #编码提示字号
+  hanb_font: HYKaiTiS.ttf #扩充字体
+  horizontal: true #水平模式
+  horizontal_gap: 6 #键水平间距
+  layout:
+    position: fixed #候选窗口位置：left|right|left_up|right_up|fixed|bottom_left|bottom_right|top_left|top_right(left、right需要Android5.0以上)
+    min_length: 5 #候选窗口最小词长
+    max_length: 4 #超过字数则换行
+    sticky_lines: 1 #固定行数
+    max_entries: 1 #候选窗口最大词条数
+    border: 2 #候选窗口边框宽度
+    max_width: 360 #最大宽度，超过则自动换行
+    max_height: 300 #最大高度
+    min_width: 0 #最小宽度
+    min_height: 50 #最小高度
+    margin_x: 5 #水平边距
+    margin_y: 5 #竖直边距
+    line_spacing: 0 #候选词的行间距(px)
+    line_spacing_multiplier: 1.2 #候选词的行间距(倍数)
+    spacing: 1 #与预编辑或边缘的距离
+    round_corner: 0 #候选窗口圆角
+    alpha: 0xff #透明度(0-255)
+    elevation: 0 #阴影(>=Android5.0)
+    background: background.png #颜色或者backgrounds目录下的图片文档名
+    movable: false #是否可移动窗口，或仅移动一次 true|false|once
+    all_phrases: false #显示所有长词
+  window: #悬浮窗口組件
+    - {start: "🍑", composition: "%s", end: "", letter_spacing: 0.1} #letter_spacing需要Android5.0。TODO: 不为0时，会导致不换行的问题
+    - {start: "\n", label: "%s.", candidate: "%s", comment: " %s", end: "", sep: "  "}  #label: "%s.", 序号;start: "\n", 换行
+  key_font: HYKaiTiS.ttf #键盘字体
+  key_height: 50 #键高
+  key_long_text_size: 15 #长标签字号
+  key_text_size: 21 #键字号
+  key_width: 10.0 #键宽，占屏幕宽的百分比
+  keyboards: [qwertyMoonNarga, DURL, SymbolsEdit, NumberEdit, .default, default] #键盘配置
+  label_text_size: 22 #标签字号
+  label_font: HYKaiTiS.ttf #编标签字体
+  latin_font: HYKaiTiS.ttf #西文本体
+  latin_locale: en_US #西文语言
+  locale: zh_CN #缺省语言 zh_TW,zh_CN,zh_HK,""
+  preview_font: HYKaiTiS.ttf #按键提示字体
+  preview_height: 56 #按键提示高度
+  preview_offset: -32 #按键提示纵向偏移
+  preview_text_size: 40 #按键提示字号
+  proximity_correction: true #按键纠错
+  reset_ascii_mode: false #显示键盘时重置为中文状态
+  round_corner: 8 #按键圆角半径
+  shadow_radius: 0 #按键阴影半径
+  speech_opencc_config: none #语音输入简繁转换
+  symbol_font: HYKaiTiS.ttf #符号字体
+  symbol_text_size: 10 #符号字号
+  text_font: HYKaiTiS.ttf #编码字体
+  #text_height: 32 #编码区高度
+  text_size: 18 #编码区字号
+  vertical_correction: -5
+  vertical_gap: 10 #键盘行距
+
+fallback_colors:
+  candidate_text_color: text_color
+  comment_text_color: candidate_text_color
+  border_color: back_color
+  candidate_separator_color: border_color
+  hilited_text_color: text_color
+  hilited_back_color: back_color
+  hilited_candidate_text_color: hilited_text_color
+  hilited_candidate_back_color: hilited_back_color
+  # hilited_label_color: hilited_candidate_text_color # 高亮候选序号 颜色
+  hilited_comment_text_color: comment_text_color
+  hilited_key_back_color: hilited_candidate_back_color
+  hilited_key_text_color: hilited_candidate_text_color
+  hilited_key_symbol_color: hilited_comment_text_color
+  hilited_off_key_back_color: hilited_key_back_color
+  hilited_on_key_back_color: hilited_key_back_color
+  hilited_off_key_text_color: hilited_key_text_color
+  hilited_on_key_text_color: hilited_key_text_color
+  key_back_color: back_color
+  key_border_color: border_color
+  key_text_color: candidate_text_color
+  key_symbol_color: comment_text_color
+  label_color: candidate_text_color
+  off_key_back_color: key_back_color
+  off_key_text_color: key_text_color
+  on_key_back_color: hilited_key_back_color
+  on_key_text_color: hilited_key_text_color
+  preview_back_color: key_back_color
+  preview_text_color: key_text_color
+  shadow_color: border_color
+  root_background: back_color # 整个键盘区+候选栏的背景图/色
+  candidate_background: back_color #候选栏的整体背景图/色
+  keyboard_back_color: border_color #键盘去的背景图/色
+  liquid_keyboard_background: keyboard_back_color # liquidKeyboard的背景图/色
+  text_back_color: back_color #编码区背景，即悬浮窗背景
+  long_text_back_color: key_back_color #长文本按键的背景(剪贴板）
+
+preset_color_schemes:
+  default: #配色方案ID
+    name: "default"
+    author: gan_niannian
+    # sound: #预设音效包。3.2.5 新增了按键音效包支持，当切换配色时可以自动切换音效。当配色没有指定音效包时，切换为同文偏好设置-按键效果-按键音效包指定的音效。音效包制作方式参照 同文按键音效包说明
+    # dark_scheme: #配色方案如有此参数，即视为明亮模式的配色。当系统切换为暗黑模式后，再次弹出键盘时，自动切换配色方案为dark_scheme指定的配色。
+    # light_scheme: #与dark_scheme相反，一套配色方案中这两个参数只需要出现一个，或者一个都没有。
+    back_color: 0xFEFBFE #候選區背景
+    border_color: 0xAB9ED9 #邊框
+    candidate_separator_color: 0xFEFBFE #候選分割背景
+    candidate_text_color: 0xB0568C #候選文字
+    comment_text_color: 0xB0568C #提示
+    hilited_back_color: 0xC3BCC6 #標明編碼背景※ 非高亮的编码背景与back_color相同
+    hilited_candidate_back_color: 0xFEEBFE #標明候選背景
+    hilited_candidate_text_color: 0xB0568C #標明候選文字
+    # hilited_comment_text_color: 0x000000 #標明提示
+    # hilited_key_back_color: 0xd3d7da #標明按鍵背景
+    # hilited_key_symbol_color: 0x000000 #標明按鍵符號
+    # hilited_key_text_color: 0x000000 #標明按鍵文字
+    # hilited_off_key_back_color: 0xd3d7da #標明按鍵關閉狀態背景
+    # hilited_off_key_text_color: 0x000000 #標明按鍵關閉狀態文字
+    # hilited_on_key_back_color: 0xd3d7da #標明按鍵打開狀態背景
+    # hilited_on_key_text_color: 0x000000 #標明按鍵打開狀態文字
+    hilited_text_color: 0xB0568C #標明編碼（一般是位于光标插入点左边的编码）
+    key_back_color: 0xFEFBFE #按鍵背景
+    # key_border_color: 0xAB9ED9 #按鍵邊框
+    # key_symbol_color: 0x5f6b73 #按鍵符號
+    key_text_color: 0xAB9ED9 #按鍵文字
+    keyboard_back_color: 0xFEFBFE #鍵盤背景
+    # label_color: 0x000000 #標籤
+    # off_key_back_color: 0xc6e6e8 #按鍵關閉狀態背景
+    # off_key_text_color: 0x000000 #按鍵關閉狀態文字
+    # on_key_back_color: 0x23948e #按鍵打開狀態背景
+    # on_key_text_color: 0x37474f #按鍵打開狀態文字
+    preview_back_color: 0xFEEBFE #按鍵提示背景
+    # preview_text_color: 0x23948e #按鍵提示文字
+    # shadow_color: 0x000000 #按鍵文字陰影
+    text_color: 0xB0568C #編碼（位于光标插入点右边的编码，或者是拼音类方案中无法正常解析的空码，比如全拼时输入 hau，u 就属于这种）
+    text_back_color: 0xFEFBFE #編碼區背景 3.2.3 后续版本支持背景图） ※ 仅当style/layout/background设置失效时才会起作用（当background生效时，text_back_color就会失效）
+    # root_background: #键盘和候选区的整体背景。
+    # candidate_background: #候选区整体背景
+    # liquid_keyboard_background: #liquidKeyboard 的键盘背景
+    # long_text_back_color: #包含长文本的按键背景（比如剪贴板）
+
+  NianNianBoBo: #配色方案ID
+    name: "芋泥草莓啵啵雪媚娘"
+    author: gan_niannian
+    # sound: #预设音效包。3.2.5 新增了按键音效包支持，当切换配色时可以自动切换音效。当配色没有指定音效包时，切换为同文偏好设置-按键效果-按键音效包指定的音效。音效包制作方式参照 同文按键音效包说明
+    # dark_scheme: #配色方案如有此参数，即视为明亮模式的配色。当系统切换为暗黑模式后，再次弹出键盘时，自动切换配色方案为dark_scheme指定的配色。
+    # light_scheme: #与dark_scheme相反，一套配色方案中这两个参数只需要出现一个，或者一个都没有。
+    back_color: 0xFEFBFE #候選區背景
+    border_color: 0xAB9ED9 #邊框
+    candidate_separator_color: 0xFEFBFE #候選分割背景
+    candidate_text_color: 0xB0568C #候選文字
+    comment_text_color: 0xB0568C #提示
+    hilited_back_color: 0xC3BCC6 #標明編碼背景※ 非高亮的编码背景与back_color相同
+    hilited_candidate_back_color: 0xFEEBFE #標明候選背景
+    hilited_candidate_text_color: 0xB0568C #標明候選文字
+    # hilited_comment_text_color: 0x000000 #標明提示
+    # hilited_key_back_color: 0xd3d7da #標明按鍵背景
+    # hilited_key_symbol_color: 0x000000 #標明按鍵符號
+    # hilited_key_text_color: 0x000000 #標明按鍵文字
+    # hilited_off_key_back_color: 0xd3d7da #標明按鍵關閉狀態背景
+    # hilited_off_key_text_color: 0x000000 #標明按鍵關閉狀態文字
+    # hilited_on_key_back_color: 0xd3d7da #標明按鍵打開狀態背景
+    # hilited_on_key_text_color: 0x000000 #標明按鍵打開狀態文字
+    hilited_text_color: 0xB0568C #標明編碼（一般是位于光标插入点左边的编码）
+    key_back_color: 0xFEFBFE #按鍵背景
+    # key_border_color: 0xAB9ED9 #按鍵邊框
+    # key_symbol_color: 0x5f6b73 #按鍵符號
+    key_text_color: 0xAB9ED9 #按鍵文字
+    keyboard_back_color: 0xFEFBFE #鍵盤背景
+    # label_color: 0x000000 #標籤
+    # off_key_back_color: 0xc6e6e8 #按鍵關閉狀態背景
+    # off_key_text_color: 0x000000 #按鍵關閉狀態文字
+    # on_key_back_color: 0x23948e #按鍵打開狀態背景
+    # on_key_text_color: 0x37474f #按鍵打開狀態文字
+    preview_back_color: 0xFEEBFE #按鍵提示背景
+    # preview_text_color: 0x23948e #按鍵提示文字
+    # shadow_color: 0x000000 #按鍵文字陰影
+    text_color: 0xB0568C #編碼（位于光标插入点右边的编码，或者是拼音类方案中无法正常解析的空码，比如全拼时输入 hau，u 就属于这种）
+    text_back_color: 0xFEFBFE #編碼區背景 3.2.3 后续版本支持背景图） ※ 仅当style/layout/background设置失效时才会起作用（当background生效时，text_back_color就会失效）
+    # root_background: #键盘和候选区的整体背景。
+    # candidate_background: #候选区整体背景
+    # liquid_keyboard_background: #liquidKeyboard 的键盘背景
+    # long_text_back_color: #包含长文本的按键背景（比如剪贴板）
+
+  moonnarga: #配色方案ID
+    name: "MoonNarga"
+    author: "MoonNarga"
+    back_color: 0xa4c9cc #候選區背景
+    border_color: 0x94A7f9 #邊框
+    candidate_separator_color: 0xa4c9cc #候選分割背景
+    candidate_text_color: 0x23225C #候選文字
+    comment_text_color: 0x000000 #提示
+    hilited_back_color: 0x94A769 #標明編碼背景
+    hilited_candidate_back_color: 0xeef7f2 #標明候選背景
+    hilited_candidate_text_color: 0x8076a3 #標明候選文字
+    hilited_comment_text_color: 0x000000 #標明提示
+    hilited_key_back_color: 0xd3d7da #標明按鍵背景
+    hilited_key_symbol_color: 0x000000 #標明按鍵符號
+    hilited_key_text_color: 0x000000 #標明按鍵文字
+    hilited_off_key_back_color: 0xd3d7da #標明按鍵關閉狀態背景
+    hilited_off_key_text_color: 0x000000 #標明按鍵關閉狀態文字
+    hilited_on_key_back_color: 0xd3d7da #標明按鍵打開狀態背景
+    hilited_on_key_text_color: 0x000000 #標明按鍵打開狀態文字
+    hilited_text_color: 0x23948e #標明編碼
+    key_back_color: 0x6bb392 #按鍵背景
+    #key_border_color: 0x2c9678 #按鍵邊框
+    key_symbol_color: 0x5f6b73 #按鍵符號
+    key_text_color: 0x006f74 #按鍵文字
+    keyboard_back_color: 0x206864 #鍵盤背景
+    label_color: 0x000000 #標籤
+    off_key_back_color: 0xc6e6e8 #按鍵關閉狀態背景
+    off_key_text_color: 0x000000 #按鍵關閉狀態文字
+    on_key_back_color: 0x23948e #按鍵打開狀態背景
+    on_key_text_color: 0x37474f #按鍵打開狀態文字
+    preview_back_color: 0xbfbfbf #按鍵提示背景
+    preview_text_color: 0x23948e #按鍵提示文字
+    shadow_color: 0x000000 #按鍵文字陰影
+    text_color: 0x8076a3 #編碼
+    text_back_color: 0xe4e7e9 #編碼區背景
+
+preset_keys:
+  # 安卓
+  BRIGHTNESS_DOWN: {label: 亮度-, send: BRIGHTNESS_DOWN}
+  BRIGHTNESS_UP: {label: 亮度+, send: BRIGHTNESS_UP}
+  CALCULATOR: {label: 計算機, send: CALCULATOR}
+  CALENDAR: {label: 日曆, send: CALENDAR}
+  CONTACTS: {label: 電話簿, send: CONTACTS}
+  ENVELOPE: {label: 信箱, send: ENVELOPE}
+  EXPLORER: {label: 瀏覽器, send: EXPLORER}
+  MUSIC: {label: 音樂, send: MUSIC}
+  POWER: {label: 電源, send: POWER}
+  SEARCH: {label: 搜尋, send: Find}
+  SLEEP: {label: 休眠, send: SLEEP}
+  VOICE_ASSIST: {label: 語音, send: VOICE_ASSIST}
+  VOLUME_DOWN: {label: 音量-, send: VOLUME_DOWN}
+  VOLUME_UP: {label: 音量+, send: VOLUME_UP}
+  VOLUME_MUTE: {label: 靜音, send: VOLUME_MUTE}
+  # 編輯
+  Shift_L: {label: '⇪', send: Shift_L, shift_lock: ascii_long}
+  Return: {label: enter_labels, send: Return}
+  Return1: {label: Enter, send: Return }
+  Hide: {label: 隐藏, send: BACK}
+  BackSpace: {label: '⇦', repeatable: true, send: BackSpace}
+  space: {label: "_______", preview: '_', repeatable: true, functional: true, send: space}
+  Escape: {label: Esc, send: Escape}
+  Home: {label: Home, send: Home}
+  Insert: {label: Ins, send: Insert}
+  Delete: {label: Del, send: Delete}
+  End: {label: End, send: End}
+  Page_Up: {label: PageUP, send: Page_Up}
+  Page_Down: {label: PageDown, send: Page_Down}
+  Left: {label: '←', send: Left}
+  Down: {label: '↓', send: Down}
+  Up: {label: '↑', send: Up}
+  Right: {label: '→', send: Right}
+  select_all: {label: 全选, send: Control+a}
+  Clear: {label: 清除, text: "{Control+a}{BackSpace}"} #全選並刪除
+  cut: {label: 剪切, send: Control+x}
+  cut_all: {label: 全挪, text: "{Control+a}{Control+x}"} #全選並剪切
+  copy: {label: 复制, send: Control+c}
+  copy_all: {label: 全謄, text: "{Control+a}{Control+c}"} #全選並複製
+  paste: {label: 粘贴, send: Control+v}
+  paste_text: {label: 貼上文本, send: Control+Shift+Alt+v} #>=Android 6.0
+  share_text: {label: 分享文本, send: Control+Alt+s} #>=Android 6.0
+  redo: {label: 重做, send: Control+Shift+z} #>=Android 6.0
+  undo: {label: 撤銷, send: Control+z} #>=Android 6.0
+  # rime組合鍵
+  F4: {label: 方案選單, send: F4}
+  BackToPreviousSyllable: {label: 刪音節, send: Control+BackSpace}
+  CommitRawInput: {label: 编码, send: Control+Return}
+  CommitScriptText: {label: 编码, send: Shift+Return}
+  CommitComment: {label: 编码, send: Control+Shift+Return}
+  DeleteCandidate: {label: 刪詞, send: Control+Delete}
+  # rime狀態
+  Mode_switch: {toggle: ascii_mode, send: Mode_switch, states: [ 中文, 西文 ]}
+  Zenkaku_Hankaku: {toggle: full_shape, send: Mode_switch, states: [ 半角, 全角 ]}
+  Henkan: {toggle: simplification, send: Mode_switch, states: [ 漢字, 汉字 ]}
+  Charset_switch: {toggle: extended_charset, send: Mode_switch, states: [ 常用, 增广 ]}
+  Punct_switch: {toggle: ascii_punct, send: Mode_switch, states: [ 。，, ．， ]}
+  #切换键盘
+  # Keyboard_symbols: {label: 符號, send: Eisu_toggle, select: symbols}
+  # Keyboard_number: {label: 數字, send: Eisu_toggle, select: number}
+  # Keyboard_mini: {label: 迷你, send: Eisu_toggle, select: mini}
+  Keyboard_letter: {label: 字母, send: Eisu_toggle, select: default}
+  Keyboard_default: {label: 返回, send: Eisu_toggle, select: .default}
+  Keyboard_switch: {label: 键盘, send: Eisu_toggle, select: .next}
+  Keyboard_DURL: {label: DURL, send: Eisu_toggle, select: DURL}
+  Keyboard_Symbols_edit: {label: 符号, send: Eisu_toggle, select: SymbolsEdit}
+  Keyboard_Number_edit: {label: 数字, send: Eisu_toggle, select: NumberEdit}
+  liquid_keyboard_switch: { label: 更多, send: function, command: liquid_keyboard, option: "符号表" }
+  liquid_keyboard_exit: {label: 返回, send: function, command: liquid_keyboard, option: "-1"}  #退出liquidkeyboard
+  liquid_keyboard_emoji: { label: 🙂, send: function, command: liquid_keyboard, option: "emoji" }
+  liquid_keyboard_clipboard: { label: 剪贴板, send: function, command: liquid_keyboard, option: "剪贴" }
+  # trime設定
+  IME_switch: { label: 🌐, send: LANGUAGE_SWITCH } #彈出對話框選擇輸入法
+  IME_last: { label: 上一輸入法, send: LANGUAGE_SWITCH, select: .last } #直接切換到上一輸入法
+  IME_next: { label: 下一輸入法, send: LANGUAGE_SWITCH, select: .next } #直接切換到下一輸入法
+  Schema_switch: {label: 下一方案, send: Control+Shift+1}
+  one_hand_switch_1: {toggle: _one_hand_mode_1, send: Mode_switch, states: [ 左手, 普通 ]}
+  one_hand_switch_2: {toggle: _one_hand_mode_2, send: Mode_switch, states: [ 右手, 普通 ]}
+  one_hand_switch_3: {toggle: _one_hand_mode_3, send: Mode_switch, states: [ 左手, 右手 ]}
+  Color_switch: {label: 配色, send: PROG_RED}
+  Help: {label: 說明, send: Help}
+  Info: {label: 關於, send: INFO}
+  Menu: {label: 方案, send: Menu}
+  Settings: {label: 設定, send: SETTINGS}
+  Color_settings: {label: 配色, send: SETTINGS, option: "color"}
+  Theme_settings: {label: 主題, send: SETTINGS, option: "theme"}
+  Schema_settings: {label: 方案, send: SETTINGS, option: "schema"}
+  Candidate_switch: {toggle: _hide_candidate, send: Mode_switch, states: [ 有候選, 無候選]}
+  Comment_switch: {toggle: _hide_comment, send: Mode_switch, states: [ 有註釋, 無註釋]}
+  Hint_switch: {toggle: _hide_key_hint, send: Mode_switch, states: [ 有助記, 無助記]}
+  # trime命令
+  Date: {label: 日期, command: date, option: "yyyy-MM-dd"}
+  ChineseDate: {label: 農曆, command: date, option: "zh_CN@calendar=chinese"} #農曆等日期(>=Android 7.0)：date 語言@calendar=曆法 格式。具體參見https://developer.android.com/reference/android/icu/util/Calendar.html
+  Time: {label: 時間, command: date, option: "HH:mm:ss"} #時間： date 格式
+  TrimeApp: {label: 同文, command: run, option: "com.osfans.trime"} #運行程序: run 包名
+  TrimeCmp: {label: 同文組件, command: run, option: "com.osfans.trime/.Pref"} #運行程序指定組件: run 包名/組件名
+  Homepage: {label: 同文主頁, command: run, option: "https://github.com/osfans/trime"} #查看網頁: run 網址
+  CommitHomepage: {label: 同文網址, commit: https://github.com/osfans/trime} #直接上屏
+  Wiki: {label: 維基, command: run, option: "https://zh.wikipedia.org/wiki/%s"} #搜索網頁: %s或者%1$s爲當前字符
+  Google: {label: 谷歌, command: run, option: "https://www.google.com/search?q=%s"} #搜索網頁: %s或者%1$s爲當前字符
+  MoeDict: {label: 萌典, command: run, option: "https://www.moedict.tw/%3$s"} #搜索網頁: %3$s爲光標前字符
+  Baidu: {label: 百度搜索, command: run, option: "https://www.baidu.com/s?wd=%4$s"} #搜索網頁: %4s爲光標前所有字符
+  Zdic: {label: 漢典, command: run, option: "http://www.zdic.net/sousuo/?q=%1$s"} #搜索網頁: %s或者%1$s爲當前字符
+  Zdic2: {label: 漢典, command: run, option: "http://www.zdic.net/sousuo/?q=%2$s"} #搜索網頁: %2$s爲當前輸入的編碼
+  WebSearch: {label: 搜索網頁, command: web_search, option: "%4$s"} #搜索，其他view、dial、edit、search等intent，參考安卓的intent文檔：https://developer.android.com/reference/android/content/Intent.html
+  Search: {label: 搜索, command: search, option: "%1$s"} #搜索短信、字典等
+  Share: {label: 分享, command: send, option: "%s"} #分享指定文本: %s或者%1$s爲當前字符
+  Deploy: {label: 部署, command: broadcast, option: "com.osfans.trime.deploy"}
+  Sync: {label: 同步, command: broadcast, option: "com.osfans.trime.sync"}
+  RepeatCommit: { label: 重复,  command: commit, option: "%1$s" } #重复输入刚上屏的内容
+
+liquid_keyboard:
+  # 目前只能直接写参数，不支持变量或者fallback机制。
+  # 缺少参数时，自动从style中加载参数。除非需要指定liquid_keyboard使用与主键盘不同的背景色、背景图，否则不应设置被注释掉的参数。
+  author: "tumuyan"
+  row: 6              #每屏最多显示多少行按键
+  row_land: 5         #横屏每屏最多显示多少行按键
+  key_height: 40      #按键高度
+  key_height_land: 40 #横屏模式按键高度
+  single_width: 60    #single类型的按键宽度
+  vertical_gap: 8     #纵向按键间隙
+  margin_x: 2       #左右按键间隙的1/2
+  keyboards: [exit, emoji, clipboard, unit, math, ascii, cn, history, draft, list, tabs, ids, jp, table, symbol, pinyin, grease, rusa, korea, lation, yinbiao, exit]  #tab列表
+  exit:
+    name: 返回
+    type: NO_KEY
+    keys: EXIT
+  tabs:
+    name: 更多
+    type: TABS
+  history:
+    name: 常用
+    type: HISTORY
+  emoji:
+    type: SINGLE
+    keys: "🙂😂🤣😆🙃😅🥺🙈🙉🙊☹😑😄🤐😨😱🌚🌝🤔❤💔🌹💣👌👍😣😥😮🙄😏😕😯😪😫😴😌🤑😉😋😎😍😘😚😛😜😝😒😓😔😲😷🤒😇🤓🤗🤕🙁😖😞😟😤😢😭😦😧😨😩😬😰😳😵😡😠☝✌🖕👎🙏🤘👏💪💋☘🍀🌸☕🍵🍺🍻🍦🍬🍚🍜🍲🍖🎂💤"
+  clipboard:
+    type: CLIPBOARD
+    name: 剪贴
+  draft:
+    type: DRAFT
+    name: 草稿
+  math:   #tab名称
+    type: SINGLE
+    name: 数学
+    keys: "≈＝≠≌<>≤≥≡()[]{}-+±×*/÷&∥%‰‱°′″∫∮∯∬∭∰∞∑∧∏∈∵∴⊥∝∨∪•√〒∝∽∈∩∧⊙⌒∥∟∣∂∆∞≌∉∪∨⊕⊿⊥∠∫∬∭"  #tab中的按键列表
+  cn:
+    type: SINGLE
+    name: 中文
+    keys:  #keys列表可以使用多种格式混合书写。
+      - ，
+      - 。
+      - ？
+      - ！
+      - ：
+      - 、
+      - “
+      - ”
+      - ‘
+      - ···
+      - ……
+      - { click: "——" }
+      - { click: "——", label: "破折" }
+      - （
+      - ）
+      - 【
+      - 】
+      - 《
+      - 》
+      - ［
+      - ］
+      - ｛
+      - ｝
+      - 「
+      - 」
+      - 『
+      - 』
+      - ～
+  symbol:
+    name: 特殊
+    type: SINGLE
+    keys: "△▽○◇□☆▲▼●◆■★▷◁▶◀♻♲†⚝✡⚹✦✸✹￼�×⌫☑☒✅❎✔✘✓✗☼☽♀☻◐㏂☀☾♂☹◑㏘☜☝☞☚☟☛▪•‥…∷※♩♪♫♬§°♭♯♮‖¶№◎¤۞℗®©卍卐℡™㏇Φ↖↑↗◤㊤◥←↔→㊧㊥㊨↙↓↘◣㊦◢⇄⇅⇆⇤↩⇥❏❐◲〼▢▣⇦⇧⇨⇩⇪↶▸◂▴▾✁↷✍⏍ϟ📝✎✆☱☰☴⚿⛮⚙☲☯☵⛶☩☐☳☷☶💬🗨⟲ღ✈☂🎤🌐🔍"
+  unit:
+    name: 单位
+    type: SINGLE
+    keys: "℃¥$€฿￡㎡m³℉￥£￠₠¹²³⁴⁵ⁿ⁶⁷⁸⁹⁰ˣ⁺⁻⁼⁽⁾½⅓¼⅔¾₁₂₃₄₅ₙ₆₇₈₉₀ₓ₊₋₌₍₎℅"
+  list:
+    name: 列表
+    type: SINGLE
+    keys: "①②③④⑤⑥⑦⑧⑨⑩⒈⒉⒊⒋⒌⒍⒎⒏⒐⒑⒒⒓⒔⒕⒖⒗⒘⒙⒚⒛⑴⑵⑶⑷⑸⑹⑺⑻⑼⑽⑾⑿⒀⒁⒂⒃⒄⒅⒆⒇㈠㈡㈢㈣㈤㈥㈦㈧㈨㈩➊➋➌➍➎➏➐➑➒➓㊀㊁㊂㊃㊄㊅㊆㊇㊈㊉ⅰⅱⅲⅳⅴⅵⅶⅷⅸⅹⅠⅡⅢⅣⅤⅥⅦⅧⅨⅩ"
+  pinyin:
+    name: 拼音
+    type: SINGLE
+    keys: "āáǎàōóēéěèǒòīíǐìūúǖǘǚǜǔùêüńňㄚㄛㄜㄧㄨㄩㄝㄞㄟㄠㄡㄢㄣㄤㄥㄦㄅㄆㄇㄈㄉㄊㄋㄌㄍㄎㄏㄐㄑㄒㄓㄔㄕㄖㄗㄘㄙ"
+  grease:
+    type: SINGLE
+    name: 希腊
+    keys: "ΑΒΓΔΕΖΗΘΙΚΛΜΝΞΟΠΡΣΤΥΦΧΨΩαβγδεζηθικλμνξοπρστυφχψω"
+  rusa:
+    name: 俄语
+    type: SINGLE
+    keys: "АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯабвгдеёжзийклмнопрстуфхцчшщъыьэюя"
+  lation:
+    name: 拉丁
+    type: SINGLE
+    keys: "ÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖØÙÚÛÜÝÞŠŸŒàáâãäåæçèéêëìíîïðñòóõôöøùúûüýþšÿœ"
+  korea:
+    type: SINGLE
+    name: "韩文"
+    keys: "dㅏㅑㅓㅕㅗㅛㅜㅠㅡㅣㅐㅒㅔㅖㅘㅙㅚㅝㅞㅟㅢㄱㄴㄷㄹㅁㅂㅅㅇㅈㅊㅋㅌㅍㅎㄲㄸㅚㅆㅉ㉠㉡㉢㉣㉤㉥㉦㉧㉨㉩㉪㉫㉬㉭㉮㉯㉰㉱㉲㉳㉴㉵㉶㉷㉸㉹㉺㉻㈀㈁㈂㈃㈄㈅㈆㈇㈈㈉㈊㈋㈌㈍㈎㈏㈐㈑㈒㈓㈔㈕㈖㈗㈘㈙㈚㈛"
+  yinbiao:
+    type: SINGLE
+    name: "音标"
+    keys: ["a:", "ɔ:", "ɜː", "i:", "u:", "ʌ", "ɒ", "ə", "ɪ", "ʊ", "e", "æ", "eɪ", "aɪ", "ɔɪ", "ɪə", "eə", "ʊə", "əʊ", "aʊ", "p", "t", "k", "f", "θ", "s", "b", "d", "g", "v", "ð", "z", "ʃ", "h", "ts", "tʃ", "j", "tr", "ʒ", "r", "dz", "dʒ", "dr", "w", "m", "n", "ŋ", "l"]
+  ascii:
+    type: SINGLE
+    name: 英文
+    keys: ",.?!:;/\\|*-+=^$`'\"^~@#%&()[]{}_"
+  ids:
+    type: SINGLE
+    name: IDS
+    keys: "⿰⿱⿲⿳⿴⿵⿶⿷⿸⿹⿺⿻↷↔"
+  jp:
+    type: SINGLE
+    name: 假名
+    keys: "あいうえおかがきぎくぐけげこごさざしじすずせぜそぞただちぢつづてでとどなにぬねのはばぱひびぴふぶぷへべぺほぼぽまみむめもゃやゅゆょよらりるれろわをんアィイウェエオカガキギクグケゲコゴサザシジスズセゼソゾタダチヂツヅテデトドナニヌネノハバパヒビピフブプヘベペホボポマミムメモャヤュユョヨラリルレロワヲン"
+
+android_keys:
+  name: [VoidSymbol, SOFT_LEFT, SOFT_RIGHT, HOME, BACK, CALL, ENDCALL,
+    '0', '1', '2', '3', '4', '5', '6', '7', '8', '9',
+    asterisk, numbersign, Up, Down, Left, Right, CENTER,
+    VOLUME_UP, VOLUME_DOWN, POWER, CAMERA, Clear,
+    a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, s, t, u, v, w, x, y, z,
+    comma, period, Alt_L, Alt_R, Shift_L, Shift_R, Tab, space,
+    SYM, EXPLORER, ENVELOPE, Return, BackSpace,
+    grave, minus, equal, bracketleft, bracketright, backslash, semicolon, apostrophe, slash, at,
+    NUM, HEADSETHOOK, FOCUS, plus, Menu, NOTIFICATION, Find,
+    MEDIA_PLAY_PAUSE, MEDIA_STOP, MEDIA_NEXT, MEDIA_PREVIOUS, MEDIA_REWIND, MEDIA_FAST_FORWARD, MUTE,
+    Page_Up, Page_Down, PICTSYMBOLS, Mode_switch,
+    BUTTON_A, BUTTON_B, BUTTON_C, BUTTON_X, BUTTON_Y, BUTTON_Z,
+    BUTTON_L1, BUTTON_R1, BUTTON_L2, BUTTON_R2,
+    BUTTON_THUMBL, BUTTON_THUMBR, BUTTON_START, BUTTON_SELECT, BUTTON_MODE,
+    Escape, Delete, Control_L, Control_R, Caps_Lock, Scroll_Lock, Meta_L, Meta_R,
+    function, Sys_Req, Pause, Home, End, Insert, Next,
+    MEDIA_PLAY, MEDIA_PAUSE, MEDIA_CLOSE, MEDIA_EJECT, MEDIA_RECORD,
+    F1, F2, F3, F4, F5, F6, F7, F8, F9, F10, F11, F12,
+    Num_Lock, KP_0, KP_1, KP_2, KP_3, KP_4, KP_5, KP_6, KP_7, KP_8, KP_9,
+  KP_Divide, KP_Multiply, KP_Subtract, KP_Add, KP_Decimal, KP_Separator, KP_Enter, KP_Equal,
+    parenleft, parenright,
+    VOLUME_MUTE, INFO, CHANNEL_UP, CHANNEL_DOWN, ZOOM_IN, ZOOM_OUT,
+    TV, WINDOW, GUIDE, DVR, BOOKMARK, CAPTIONS, SETTINGS,
+    TV_POWER, TV_INPUT, STB_POWER, STB_INPUT, AVR_POWER, AVR_INPUT,
+    PROG_RED, PROG_GREEN, PROG_YELLOW, PROG_BLUE, APP_SWITCH,
+    BUTTON_1, BUTTON_2, BUTTON_3, BUTTON_4, BUTTON_5, BUTTON_6, BUTTON_7, BUTTON_8,
+    BUTTON_9, BUTTON_10, BUTTON_11, BUTTON_12, BUTTON_13, BUTTON_14, BUTTON_15, BUTTON_16,
+    LANGUAGE_SWITCH, MANNER_MODE, 3D_MODE, CONTACTS, CALENDAR, MUSIC, CALCULATOR,
+    Zenkaku_Hankaku, Eisu_toggle, Muhenkan, Henkan, Hiragana_Katakana, yen, RO, Kana_Lock,
+    ASSIST, BRIGHTNESS_DOWN, BRIGHTNESS_UP, MEDIA_AUDIO_TRACK,
+    SLEEP, WAKEUP, PAIRING, MEDIA_TOP_MENU, '11', '12', LAST_CHANNEL, TV_DATA_SERVICE, VOICE_ASSIST,
+    TV_RADIO_SERVICE, TV_TELETEXT, TV_NUMBER_ENTRY, TV_TERRESTRIAL_ANALOG, TV_TERRESTRIAL_DIGITAL,
+    TV_SATELLITE, TV_SATELLITE_BS, TV_SATELLITE_CS, TV_SATELLITE_SERVICE, TV_NETWORK, TV_ANTENNA_CABLE,
+    TV_INPUT_HDMI_1, TV_INPUT_HDMI_2, TV_INPUT_HDMI_3, TV_INPUT_HDMI_4,
+    TV_INPUT_COMPOSITE_1, TV_INPUT_COMPOSITE_2, TV_INPUT_COMPONENT_1, TV_INPUT_COMPONENT_2, TV_INPUT_VGA_1,
+    TV_AUDIO_DESCRIPTION, TV_AUDIO_DESCRIPTION_MIX_UP, TV_AUDIO_DESCRIPTION_MIX_DOWN,
+    TV_ZOOM_MODE, TV_CONTENTS_MENU, TV_MEDIA_CONTEXT_MENU, TV_TIMER_PROGRAMMING,
+    Help, NAVIGATE_PREVIOUS, NAVIGATE_NEXT, NAVIGATE_IN, NAVIGATE_OUT,
+    STEM_PRIMARY, STEM_1, STEM_2, STEM_3,
+    Pointer_UpLeft, Pointer_DownLeft, Pointer_UpRight, Pointer_DownRight,
+    MEDIA_SKIP_FORWARD, MEDIA_SKIP_BACKWARD, MEDIA_STEP_FORWARD, MEDIA_STEP_BACKWARD,
+    SOFT_SLEEP, CUT, COPY, PASTE,
+    SYSTEM_NAVIGATION_UP, SYSTEM_NAVIGATION_DOWN, SYSTEM_NAVIGATION_LEFT, SYSTEM_NAVIGATION_RIGHT,
+    A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, Q, R, S, T, U, V, W, X, Y, Z,
+    exclam, quotedbl, dollar, percent, ampersand, colon, less, greater, question, asciicircum, underscore, braceleft, bar, braceright, asciitilde]
+  symbols: 'ABCDEFGHIJKLMNOPQRSTUVWXYZ!"$%&:<>?^_{|}~'
+  when:
+    ascii: 西文标签
+    paging: 翻页标签
+    has_menu: 菜单标签
+    composing: 输入状态标签
+    #always: 始终
+    #hover: 滑过
+    combo: 并击
+    click: 单按
+    long_click: 长按
+    #double_click: 双按
+    swipe_left: 左滑
+    swipe_right: 右滑
+    swipe_up: 上滑
+    swipe_down: 下滑
+  property:
+    width: 宽度
+    height: 高度
+    gap: 间隔
+    preview: 预览
+    hint: 提示
+    label: 标签
+    text: 文本
+    states: 状态标签
+    repeatable: 连续按键
+    functional: 功能键
+    shift_lock: Shift锁定 #ascii_long: 英文长按中文单按锁定, long: 长按锁定, click: 单按锁定
+  action:
+    command: 命令
+    option: 参数
+    select: 选择
+    toggle: 状态
+    send: 按键
+
+preset_keyboards:
+  default:
+    name: MoonNargaDefault
+    author: "MoonNarga <MoonNarga@outlook.com>"
+    ascii_mode: 0
+    width: 15
+    height: 55
+    lock: true
+    keys:
+      - {click: 'q', long_click: '!'}
+      - {click: 'w', long_click: '@'}
+      - {click: 'e', long_click: '#'}
+      - {click: 'r', long_click: '$'}
+      - {click: 't', long_click: '%'}
+      - {click: 'y', long_click: '^'}
+      - {click: 'u', long_click: '&'}
+      - {click: 'i', long_click: '*'}
+      - {click: 'o', long_click: '('}
+      - {click: 'p', long_click: ')'}
+      - {width: 5}
+
+      - {click: 'a', long_click: select_all}
+      - {click: 's', long_click: '~'}
+      - {click: 'd', long_click: '-'}
+      - {click: 'f', long_click: '+'}
+      - {click: 'g', long_click: '\'}
+      - {click: 'h', long_click: '"'}
+      - {click: 'j', long_click: "'"}
+      - {click: 'k', long_click: ':'}
+      - {click: 'l', long_click: ";"}
+      
+      - {click: Shift_L, swipe_up: Punct_switch, swipe_right: Henkan, swipe_down: Charset_switch, send_bindings: false, width: 12}
+      - {click: 'z', long_click: '`'}
+      - {click: 'x', long_click: cut}
+      - {click: 'c', long_click: copy}
+      - {click: 'v', long_click: paste}
+      - {click: 'b', long_click: '_'}
+      - {click: 'n', long_click: ','}
+      - {click: 'm', long_click: '.'}
+      - {click: BackSpace, swipe_left: Escape, width: 16}
+      - {click: Keyboard_Symbols_edit, long_click: Keyboard_Number_edit, width: 13}
+      - {click: Mode_switch, long_click: Menu, width: 12}
+      - {click: Left, width: 11}
+      - {click: space, long_click: Keyboard_DURL, width: 26}
+      - {click: Right, width: 11}
+      - {click: '/', long_click: '?', width: 8}
+      - {click: Return, long_click: CommitComment, width: 15}
+
+  DURL: #布局ID
+    author: "MoonNarga" #作者
+    name: "DURL" #方便自己辨识的名字
+    ascii_mode: 1 #默认进入英文状态
+    height: 44 #每行高度
+    width: 11 #按键默认宽度（取所有按键中用得较多的宽度值，接下来就可以少写一些width了）
+    keys: #按键排列
+      # 第一行
+      - { click: "#", long_click: cut }
+      - { click: "%", long_click: copy }
+      - { click: "@", long_click: paste }
+      - { click: "+", width: 13 }
+      - { click: 7, width: 18 }
+      - { click: 8, width: 18 }
+      - { click: 9, width: 18 }
+      # 第二行
+      - { click: Page_Up }
+      - { click: Up }
+      - { click: Page_Down }
+      - { click: "-", width: 13 }
+      - { click: 4, width: 18 }
+      - { click: 5, width: 18 }
+      - { click: 6, width: 18 }
+      # 第三行
+      - { click: Left }
+      - { click: Tab }
+      - { click: Right }
+      - { click: "×", width: 13 }
+      - { click: 1, width: 18 }
+      - { click: 2, width: 18 }
+      - { click: 3, width: 18 }
+      # 第四行
+      - { click: Home }
+      - { click: Down }
+      - { click: End }
+      - { click: "÷", width: 13 }
+      - { click: ",", width: 18 }
+      - { click: 0, width: 18 }
+      - { click: BackSpace, width: 18 }
+      # 第五行
+      - { click: Keyboard_default, long_click: Menu, width: 18 }
+      - { click: "±", width: 14.9 } #如果上下的按键没有严格对齐，可以微调宽度
+      - { click: "=", width: 13 }
+      - { click: space, width: 18 }
+      - { click: ., width: 18 }
+      - { click: Return, width: 18 }
+
+  NumberEdit:
+    name: "number_edit"
+    author: "MoonNarga"
+    width: 20
+    height: 44
+    keys:
+      - {click: '+'}
+      - {click: '1'}
+      - {click: '2'}
+      - {click: '3'}
+      - {click: '#'}
+      - {click: '-'}
+      - {click: '4'}
+      - {click: '5'}
+      - {click: '6'}
+      - {click: '%'}
+      - {click: '*'}
+      - {click: '7'}
+      - {click: '8'}
+      - {click: '9'}
+      - {click: ':'}
+      - {click: '/'}
+      - {click: '±'}
+      - {click: '0'}
+      - {click: '.'}
+      - {click: ','}
+      - {click: '='}
+      - {click: Keyboard_default, long_click: Keyboard_Symbols_edit}
+      - {click: space}
+      - {click: BackSpace}
+      - {click: Return}
+
+  SymbolsEdit:
+    name: "symbols_edit"
+    author: "MoonNarga"
+    ascii_mode: 1
+    width: 10
+    height: 44
+    keys:
+      - {click: '1'}
+      - {click: '2'}
+      - {click: '3'}
+      - {click: '4'}
+      - {click: '5'}
+      - {click: '6'}
+      - {click: '7'}
+      - {click: '8'}
+      - {click: '9'}
+      - {click: '0'}
+      - {click: '~',long_click: '`'}
+      - {click: '!'}
+      - {click: '@'}
+      - {click: '#'}
+      - {click: '$'}
+      - {click: '￥'}
+      - {click: '%'}
+      - {click: '^'}
+      - {click: '&'}
+      - {click: '*'}
+      - {click: '(', long_click: '{'}
+      - {click: ')', long_click: '}'}
+      - {click: '[', long_click: '【'}
+      - {click: ']', long_click: '】'}
+      - {click: '「', long_click: '『'}
+      - {click: '」', long_click: '』'}
+      - {click: '、', ascii: '\', long_click: '|'}
+      - {click: '/', long_click: '√'}
+      - {click: ':'}
+      - {click: ';'}
+      - {click: '+'}
+      - {click: '-', long_click: '_'}
+      - {click: '='}
+      - {click: '〈', long_click: '《', ascii: '<'}
+      - {click: '〉', long_click: '》', ascii: '>'}
+      - {click: '“', ascii: '"', long_click: '‘'}
+      - {click: '”', ascii: "'", long_click: '’'}
+      - {click: '，', ascii: ','}
+      - {click: '？', ascii: '?'}
+      - {click: BackSpace}
+      - {click: Keyboard_default, long_click: Menu, width: 15}
+      - {click: Keyboard_Number_edit, long_click: Mode_switch}
+      - {click: space, width: 40}
+      - {click: '。', ascii: '.'}
+      - {click: Hide, long_click: Delete}
+      - {click: Return, long_click: select_all, width: 15}
+
+  qwertyMoonNarga:
+    name: MoonNarga
+    author: "MoonNarga <MoonNarga@outlook.com>"
+    scii_mode: 0
+    width: 10
+    height: 53
+    horizontal_gap: 4
+    vertical_gap: 10
+    key_text_offset_y: 0
+    key_symbol_offset_y: 2.0
+    key_press_offset_x: 0
+    key_press_offset_y: 8
+    key_symbol_offset_x: 0
+    lock: true
+    keys:
+      - {click: 'q', long_click: '!'}
+      - {click: 'w', long_click: '@'}
+      - {click: 'e', long_click: '#'}
+      - {click: 'r', long_click: '$'}
+      - {click: 't', long_click: '%'}
+      - {click: 'y', long_click: '^'}
+      - {click: 'u', long_click: '&'}
+      - {click: 'i', long_click: '*'}
+      - {click: 'o', long_click: '('}
+      - {click: 'p', long_click: ')'}
+      - {width: 5}
+
+      - {click: 'a', long_click: select_all}
+      - {click: 's', long_click: '~'}
+      - {click: 'd', long_click: '-'}
+      - {click: 'f', long_click: '+'}
+      - {click: 'g', long_click: '\'}
+      - {click: 'h', long_click: '"'}
+      - {click: 'j', long_click: "'"}
+      - {click: 'k', long_click: ':'}
+      - {click: 'l', long_click: ";"}
+      
+      - {click: Shift_L, swipe_up: Punct_switch, swipe_right: Henkan, swipe_down: Charset_switch, send_bindings: false, width: 12}
+      - {click: 'z', long_click: '`'}
+      - {click: 'x', long_click: cut}
+      - {click: 'c', long_click: copy}
+      - {click: 'v', long_click: paste}
+      - {click: 'b', long_click: '_'}
+      - {click: 'n', long_click: ','}
+      - {click: 'm', long_click: '.'}
+      - {click: BackSpace, swipe_left: Escape, width: 16}
+      - {click: Keyboard_Symbols_edit, long_click: Keyboard_Number_edit, width: 13}
+      - {click: Mode_switch, long_click: liquid_keyboard_switch, width: 12}
+      - {click: Left, width: 11}
+      - {click: space, long_click: liquid_keyboard_clipboard, width: 26}
+      - {click: Right, width: 11}
+      - {click: '/', long_click: '?', width: 8}
+      - {click: Return, long_click: CommitComment, width: 15}
+
+  qwertyWithNumberMoonNarga:
+    name: MoonNarga
+    author: "MoonNarga <MoonNarga@outlook.com>"
+    ascii_mode: 0
+    columns: 10 #鍵盤列數，超過則自動換行，默認30列
+    width: 10
+    height: 55
+    lock: true
+    key_symbol_offset_x: 0
+    key_symbol_offset_y: 0
+    key_text_offset_x: 0
+    key_text_offset_y: 0
+    key_hint_offset_x: 0
+    key_hint_offset_y: 0
+    key_press_offset_x: 2
+    key_press_offset_y: 2
+    keys:
+      - {click: '1', long_click: '!', height: 45}
+      - {click: '2', long_click: '@', height: 45}
+      - {click: '3', long_click: '#', height: 45}
+      - {click: '4', long_click: '$', height: 45}
+      - {click: '5', long_click: '%', height: 45}
+      - {click: '6', long_click: '^', height: 45}
+      - {click: '7', long_click: '&', height: 45}
+      - {click: '8', long_click: '*', height: 45}
+      - {click: '9', long_click: '(', height: 45}
+      - {click: '0', long_click: ')', height: 45}
+      - {click: 'q', long_click: '_'}
+      - {click: 'w', long_click: '-'}
+      - {click: 'e', long_click: '+'}
+      - {click: 'r', long_click: '='}
+      - {click: 't', long_click: '|'}
+      - {click: 'y', long_click: '\'}
+      - {click: 'u', long_click: '['}
+      - {click: 'i', long_click: ']'}
+      - {click: 'o', long_click: '{'}
+      - {click: 'p', long_click: '}'}
+      - {width: 5}
+      - {click: 'a', long_click: select_all }
+      - {click: 's', long_click: undo}
+      - {click: 'd', long_click: redo}
+      - {click: 'f', long_click: Home}
+      - {click: 'g', long_click: End}
+      - {click: 'h', long_click: Left}
+      - {click: 'j', long_click: Right}
+      - {click: 'k', long_click: ':'}
+      - {click: 'l', long_click: ';'}
+      - {width: 5}
+      - {click: Shift_L, swipe_up: Punct_switch, swipe_right: Henkan, swipe_down: Charset_switch, send_bindings: false, width: 12}
+      - {click: 'z', long_click: '`'}
+      - {click: 'x', long_click: cut}
+      - {click: 'c', long_click: copy}
+      - {click: 'v', long_click: paste}
+      - {click: 'b', long_click: '~'}
+      - {click: 'n', long_click: '"'}
+      - {click: 'm', long_click: "'"}
+      - {click: BackSpace, swipe_left: Escape, width: 18}
+      - {click: Keyboard_Symbols_edit, long_click: Keyboard_Number_edit, width: 13}
+      - {click: Mode_switch, long_click: liquid_keyboard_switch, width: 12}
+      - {click: ',', long_click: '<'}
+      - {click: space, long_click: Keyboard_DURL, width: 30}
+      - {click: '.', long_click: '>'}
+      - {click: '/', long_click: '?'}
+      - {click: Return, long_click: CommitComment, width: 15}
+
+# preset_keyboards/wubi_moonnarga/import_preset: qwertyMoonNarga
+  
