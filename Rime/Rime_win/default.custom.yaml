@@ -7,7 +7,6 @@ customization:
 patch:
   schema_list:
     - { schema: luna_pinyin }
-    - { schema: double_pinyin }
     - { schema: wubi_moonnarga }
 
   switcher/hotkeys:
