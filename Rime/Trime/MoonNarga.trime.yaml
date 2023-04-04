@@ -312,7 +312,7 @@ preset_keys:
   liquid_keyboard_switch: { label: 更多, send: function, command: liquid_keyboard, option: "符号表" }
   liquid_keyboard_exit: {label: 返回, send: function, command: liquid_keyboard, option: "-1"}  #退出liquidkeyboard
   liquid_keyboard_emoji: { label: 🙂, send: function, command: liquid_keyboard, option: "emoji" }
-  liquid_keyboard_clipboard: { label: 剪贴板, send: function, command: liquid_keyboard, option: "剪贴" }
+  liquid_keyboard_clipboard: { label: 📋, send: function, command: liquid_keyboard, option: "剪贴" }
   # trime設定
   IME_switch: { label: 🌐, send: LANGUAGE_SWITCH } #彈出對話框選擇輸入法
   IME_last: { label: 上一輸入法, send: LANGUAGE_SWITCH, select: .last } #直接切換到上一輸入法
@@ -694,39 +694,38 @@ preset_keyboards:
       - {click: '8'}
       - {click: '9'}
       - {click: '0'}
-      - {click: '~',long_click: '`'}
       - {click: '!'}
       - {click: '@'}
       - {click: '#'}
       - {click: '$'}
-      - {click: '￥'}
       - {click: '%'}
       - {click: '^'}
       - {click: '&'}
       - {click: '*'}
       - {click: '(', long_click: '{'}
       - {click: ')', long_click: '}'}
-      - {click: '[', long_click: '【'}
-      - {click: ']', long_click: '】'}
-      - {click: '「', long_click: '『'}
-      - {click: '」', long_click: '』'}
-      - {click: '、', ascii: '\', long_click: '|'}
-      - {click: '/', long_click: '√'}
+      - {click: '~',long_click: '`'}
+      - {click: '[', long_click: '「'}
+      - {click: ']', long_click: '」'}
+      - {click: '“', ascii: '"', long_click: '‘'}
+      - {click: '”', ascii: "'", long_click: '’'}
       - {click: ':'}
       - {click: ';'}
       - {click: '+'}
       - {click: '-', long_click: '_'}
       - {click: '='}
+      - {click: '、', ascii: '\', long_click: '|'}
       - {click: '〈', long_click: '《', ascii: '<'}
-      - {click: '〉', long_click: '》', ascii: '>'}
-      - {click: '“', ascii: '"', long_click: '‘'}
-      - {click: '”', ascii: "'", long_click: '’'}
-      - {click: '，', ascii: ','}
+      - {click: '〉', long_click: '》', ascii: '>'}      
+      - {click: '/', long_click: '√'}
       - {click: '？', ascii: '?'}
-      - {click: BackSpace}
+      - {click: liquid_keyboard_emoji}
+      - {click: liquid_keyboard_clipboard}
+      - {click: BackSpace, width: 30}
       - {click: Keyboard_default, long_click: Menu, width: 15}
       - {click: Keyboard_Number_edit, long_click: Mode_switch}
-      - {click: space, width: 40}
+      - {click: '，', ascii: ','}
+      - {click: space, width: 30}
       - {click: '。', ascii: '.'}
       - {click: Hide, long_click: Delete}
       - {click: Return, long_click: select_all, width: 15}
@@ -778,9 +777,9 @@ preset_keyboards:
       - {click: 'm', long_click: '.'}
       - {click: BackSpace, swipe_left: Escape, width: 16}
       - {click: Keyboard_Symbols_edit, long_click: Keyboard_Number_edit, width: 13}
-      - {click: Mode_switch, long_click: liquid_keyboard_switch, width: 12}
+      - {click: Mode_switch, long_click: Theme_settings, width: 12}
       - {click: Left, width: 11}
-      - {click: space, long_click: liquid_keyboard_clipboard, width: 26}
+      - {click: space, width: 26}
       - {click: Right, width: 11}
       - {click: '/', long_click: '?', width: 8}
       - {click: Return, long_click: CommitComment, width: 15}
