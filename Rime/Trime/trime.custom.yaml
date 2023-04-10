@@ -619,8 +619,8 @@ patch:
       - {click: '-', long_click: '_'}
       - {click: '='}
       - {click: '、', ascii: '\', long_click: '|'}
-      - {click: '〈', long_click: '《', ascii: '<'}
-      - {click: '〉', long_click: '》', ascii: '>'}      
+      - {click: '<', long_click: '《', ascii: '<'}
+      - {click: '>', long_click: '》', ascii: '>'}      
       - {click: '/', long_click: '√'}
       - {click: '？', ascii: '?'}
       - {click: liquid_keyboard_emoji}
