@@ -1,0 +1,43 @@
+set number
+set relativenumber
+
+set hlsearch
+"set incsearch
+"
+"set ignorecase
+"
+
+set smartcase
+
+let mapleader=" "
+
+set sw=4
+set ts=4
+
+set autoindent
+
+set tabstop=4
+set shiftwidth=4
+set expandtab
+set softtabstop=4
+
+set backspace=indent,eol,start
+
+set clipboard=unnamed
+
+:nnoremap <leader>nh :nohlsearch<CR>
+
+:nnoremap <leader>w :w<CR>
+:nnoremap <leader>q :q<CR>
+
+:nnoremap K :vsc Window.NextTab<CR>
+:nnoremap J :vsc Window.PreviousTab<CR>
+
+:nnoremap <leader>h <c-w>h
+:nnoremap <leader>l <c-w>l
+:nnoremap <leader>k <c-w>k
+:nnoremap <leader>j <c-w>j
+
+:nnoremap <leader>e :vsc View.SolutionExplorer<CR>
+
+:nnoremap <leader>ref :vsc Edit.FindAllReferences<CR>
