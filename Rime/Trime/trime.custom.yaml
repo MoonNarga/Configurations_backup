@@ -119,13 +119,13 @@ patch:
     # sound: #预设音效包。3.2.5 新增了按键音效包支持，当切换配色时可以自动切换音效。当配色没有指定音效包时，切换为同文偏好设置-按键效果-按键音效包指定的音效。音效包制作方式参照 同文按键音效包说明
     # dark_scheme: #配色方案如有此参数，即视为明亮模式的配色。当系统切换为暗黑模式后，再次弹出键盘时，自动切换配色方案为dark_scheme指定的配色。
     # light_scheme: #与dark_scheme相反，一套配色方案中这两个参数只需要出现一个，或者一个都没有。
-    back_color: 0xFEFBFE #候選區背景
+    back_color: 0x60FEFBFE #候選區背景
     border_color: 0xAB9ED9 #邊框
     candidate_separator_color: 0xFEFBFE #候選分割背景
     candidate_text_color: 0xB0568C #候選文字
     comment_text_color: 0xB0568C #提示
     hilited_back_color: 0xC3BCC6 #標明編碼背景※ 非高亮的编码背景与back_color相同
-    hilited_candidate_back_color: 0xFEEBFE #標明候選背景
+    hilited_candidate_back_color: 0x60FEEBFE #標明候選背景
     hilited_candidate_text_color: 0xB0568C #標明候選文字
     # hilited_comment_text_color: 0x000000 #標明提示
     # hilited_key_back_color: 0xd3d7da #標明按鍵背景
@@ -136,11 +136,12 @@ patch:
     # hilited_on_key_back_color: 0xd3d7da #標明按鍵打開狀態背景
     # hilited_on_key_text_color: 0x000000 #標明按鍵打開狀態文字
     hilited_text_color: 0xB0568C #標明編碼（一般是位于光标插入点左边的编码）
-    key_back_color: 0xFEFBFE #按鍵背景
+    key_back_color: 0x60FEFBFE #按鍵背景
     # key_border_color: 0xAB9ED9 #按鍵邊框
     # key_symbol_color: 0x5f6b73 #按鍵符號
     key_text_color: 0xAB9ED9 #按鍵文字
     keyboard_back_color: 0xFEFBFE #鍵盤背景
+    keyboard_background: 1.9.png #键盘背景，铺满候选栏和导航栏（如果有）。可设颜色值或图片路径。
     # label_color: 0x000000 #標籤
     # off_key_back_color: 0xc6e6e8 #按鍵關閉狀態背景
     # off_key_text_color: 0x000000 #按鍵關閉狀態文字
@@ -159,37 +160,38 @@ patch:
   "preset_color_schemes/moonnarga": #配色方案ID
     name: "MoonNarga"
     author: "MoonNarga"
-    back_color: 0xa4c9cc #候選區背景
-    border_color: 0x94A7f9 #邊框
-    candidate_separator_color: 0xa4c9cc #候選分割背景
-    candidate_text_color: 0x23225C #候選文字
+    back_color: 0x60FEFBFE #候選區背景
+    border_color: 0xFEFBFE #邊框
+    candidate_separator_color: 0x60FEFBFE #候選分割背景
+    candidate_text_color: 0x000000 #候選文字
     comment_text_color: 0x000000 #提示
-    hilited_back_color: 0x94A769 #標明編碼背景
-    hilited_candidate_back_color: 0xeef7f2 #標明候選背景
-    hilited_candidate_text_color: 0x8076a3 #標明候選文字
+    hilited_back_color: 0x60FEFBFE #標明編碼背景
+    hilited_candidate_back_color: 0x60FEFBFE #標明候選背景
+    hilited_candidate_text_color: 0x000000 #標明候選文字
     hilited_comment_text_color: 0x000000 #標明提示
-    hilited_key_back_color: 0xd3d7da #標明按鍵背景
+    hilited_key_back_color: 0xFEFBFE #標明按鍵背景
     hilited_key_symbol_color: 0x000000 #標明按鍵符號
     hilited_key_text_color: 0x000000 #標明按鍵文字
-    hilited_off_key_back_color: 0xd3d7da #標明按鍵關閉狀態背景
+    hilited_off_key_back_color: 0xFEFBFE #標明按鍵關閉狀態背景
     hilited_off_key_text_color: 0x000000 #標明按鍵關閉狀態文字
-    hilited_on_key_back_color: 0xd3d7da #標明按鍵打開狀態背景
+    hilited_on_key_back_color: 0xFEFBFE #標明按鍵打開狀態背景
     hilited_on_key_text_color: 0x000000 #標明按鍵打開狀態文字
-    hilited_text_color: 0x23948e #標明編碼
-    key_back_color: 0x6bb392 #按鍵背景
+    hilited_text_color: 0x000000 #標明編碼
+    key_back_color: 0x60FEFBFE #按鍵背景
     #key_border_color: 0x2c9678 #按鍵邊框
-    key_symbol_color: 0x5f6b73 #按鍵符號
-    key_text_color: 0x006f74 #按鍵文字
-    keyboard_back_color: 0x206864 #鍵盤背景
+    key_symbol_color: 0x000000 #按鍵符號
+    key_text_color: 0x000000 #按鍵文字
+    keyboard_back_color: 0xFEFBFE #鍵盤背景
+    keyboard_background: 1.9.png #键盘背景，铺满候选栏和导航栏（如果有）。可设颜色值或图片路径。
     label_color: 0x000000 #標籤
-    off_key_back_color: 0xc6e6e8 #按鍵關閉狀態背景
+    off_key_back_color: 0x60FEFBFE #按鍵關閉狀態背景
     off_key_text_color: 0x000000 #按鍵關閉狀態文字
-    on_key_back_color: 0x23948e #按鍵打開狀態背景
-    on_key_text_color: 0x37474f #按鍵打開狀態文字
-    preview_back_color: 0xbfbfbf #按鍵提示背景
-    preview_text_color: 0x23948e #按鍵提示文字
+    on_key_back_color: 0x000000 #按鍵打開狀態背景
+    on_key_text_color: 0x000000 #按鍵打開狀態文字
+    preview_back_color: 0xFEFBFE #按鍵提示背景
+    preview_text_color: 0x000000 #按鍵提示文字
     shadow_color: 0x000000 #按鍵文字陰影
-    text_color: 0x8076a3 #編碼
+    text_color: 0x000000 #編碼
     text_back_color: 0xe4e7e9 #編碼區背景
 
   "preset_keys":
@@ -627,7 +629,7 @@ patch:
       - {click: liquid_keyboard_clipboard}
       - {click: BackSpace, width: 30}
       - {click: Keyboard_default, long_click: Menu, width: 15}
-      - {click: Keyboard_Number_edit}
+      - {click: Keyboard_Number_edit, long_click: IME_switch}
       - {click: '，', ascii: ','}
       - {click: space, width: 30, long_click: Keyboard_DURL}
       - {click: '。', ascii: '.'}
@@ -644,10 +646,10 @@ patch:
     horizontal_gap: 10
     vertical_gap: 10
     key_text_offset_y: 0
-    key_symbol_offset_y: 2.0
     key_press_offset_x: 0
     key_press_offset_y: 8
     key_symbol_offset_x: 0
+    key_symbol_offset_y: 1
     lock: true
     keys:
       - {click: 'q', long_click: '!'}
@@ -673,8 +675,7 @@ patch:
       - {click: 'l', long_click: ";"}
       - {width: 5}
 
-      
-      - {click: Shift_L, swipe_up: Punct_switch, swipe_right: Henkan, swipe_down: Charset_switch, send_bindings: false, width: 12}
+      - {click: Shift_L, width: 12}
       - {click: 'z', long_click: '`'}
       - {click: 'x', long_click: cut}
       - {click: 'c', long_click: copy}
@@ -697,9 +698,9 @@ patch:
     ascii_mode: 0
     columns: 12
     width: 10
-    height: 53
-    horizontal_gap: 10
-    vertical_gap: 10
+    height: 45
+    horizontal_gap: 6
+    vertical_gap: 8
     key_text_offset_y: 0
     key_symbol_offset_y: 2.0
     key_press_offset_x: 0
@@ -707,16 +708,16 @@ patch:
     key_symbol_offset_x: 0
     lock: false
     keys:
-      - {click: '1', long_click: '!', height: 45}
-      - {click: '2', long_click: '@', height: 45}
-      - {click: '3', long_click: '#', height: 45}
-      - {click: '4', long_click: '$', height: 45}
-      - {click: '5', long_click: '%', height: 45}
-      - {click: '6', long_click: '^', height: 45}
-      - {click: '7', long_click: '&', height: 45}
-      - {click: '8', long_click: '*', height: 45}
-      - {click: '9', long_click: '(', height: 45}
-      - {click: '0', long_click: ')', height: 45}
+      - {click: '1', long_click: '!', height: 42}
+      - {click: '2', long_click: '@', height: 42}
+      - {click: '3', long_click: '#', height: 42}
+      - {click: '4', long_click: '$', height: 42}
+      - {click: '5', long_click: '%', height: 42}
+      - {click: '6', long_click: '^', height: 42}
+      - {click: '7', long_click: '&', height: 42}
+      - {click: '8', long_click: '*', height: 42}
+      - {click: '9', long_click: '(', height: 42}
+      - {click: '0', long_click: ')', height: 42}
       - {click: 'q', long_click: '`'}
       - {click: 'w', long_click: '|'}
       - {click: 'e', long_click: '\'}
@@ -754,3 +755,5 @@ patch:
       - {click: Right, width: 11}
       - {click: '.', long_click: '?'}
       - {click: Return, long_click: CommitComment, width: 15}
+
+  "preset_keyboards/wubi_moonnarga/import_preset": qwertyWithNumberMoonNarga
