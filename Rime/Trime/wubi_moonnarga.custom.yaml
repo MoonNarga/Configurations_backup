@@ -1,0 +1,18 @@
+patch:
+  __include: easy_en:/patch
+  easy_en/enable_sentence: false
+
+  switches:
+    - name: ascii_mode
+      reset: 0
+      states: [ 中文, 西文 ]
+    - name: ascii_punct
+      states: [ 。，, ．， ]
+    - name: emoji_suggestion
+      reset: 1
+      states: [ "🈚️️\uFE0E", "🈶️️\uFE0F" ]
+    - options: [_key_Hide]
+      states: ["🕊"]
+    - name: extended_charset
+      states: [ 常用, 增廣 ]
+    
