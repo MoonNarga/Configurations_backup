@@ -1,20 +1,20 @@
-# Trime default style settings
+# Trime style settings
 # encoding: utf-8
 
-config_version: "3.0"
-name: 預設 #方案名稱
-author: osfans #作者資訊
+config_version: "1.0"
+name: MoonNarga #方案名稱
+author: MoonNarga #作者資訊
 
 style:
   auto_caps: false #自動句首大寫:true|false|ascii
   background_dim_amount: 0.5
   candidate_font: HYKaiTiS.ttf #候选字型
-  candidate_padding: 26 #候選項內邊距
+  candidate_padding: 20 #候選項內邊距
   candidate_spacing: 0 #候選間距
   candidate_text_size: 20 #候選字號
   candidate_use_cursor: true #高亮候選項
   candidate_view_height: 28 #候選區高度
-  color_scheme: default #配色方案
+  color_scheme: moonnarga #配色方案
   comment_font: HYKaiTiS.ttf #編碼提示字型
   comment_height: 12 #編碼提示區高度
   comment_on_top: true #編碼提示在上方或右側
@@ -25,7 +25,7 @@ style:
   keyboard_padding: 0 #竖屏模式下，屏幕左右两侧与键盘的距离（曲面屏减少误触）
   keyboard_padding_left: 0 #竖屏屏模式下，左手键盘布局，屏幕左侧与键盘的距离
   keyboard_padding_right: 40 #竖屏屏模式下，左手键盘布局，屏幕右侧与键盘的距离
-  keyboard_padding_bottom: 0 #竖屏模式下，屏幕下边缘与键盘的距离（避免误触发全面屏手势）
+  keyboard_padding_bottom: 8 #竖屏模式下，屏幕下边缘与键盘的距离（避免误触发全面屏手势）
   keyboard_padding_land: 40 #横屏模式下，屏幕左右两侧与键盘的距离（避免横屏按键过度拉伸变形）
   keyboard_padding_land_bottom: 0 #横屏模式下，屏幕下侧与键盘的距离
   layout: #懸浮窗口設置
@@ -183,7 +183,7 @@ preset_color_schemes:
     text_back_color: 0xe4e7e9 #編碼區背景
 
   starcraft:
-    name: 星際我爭霸／StarCraft
+    name: 星際爭霸／StarCraft
     author: Contralisk <contralisk@gmail.com>, original artwork by Blizzard Entertainment
     text_color: 0x88aacc
     candidate_text_color: 0x55bb30
