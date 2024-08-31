@@ -174,7 +174,7 @@ preset_color_schemes:
     label_color: 0x000000 #標籤
     off_key_back_color: 0x60FEFBFE #按鍵關閉狀態背景
     off_key_text_color: 0x000000 #按鍵關閉狀態文字
-    on_key_back_color: 0x000000 #按鍵打開狀態背景
+    on_key_back_color: 0x60FEFBFE #按鍵打開狀態背景
     on_key_text_color: 0x000000 #按鍵打開狀態文字
     preview_back_color: 0xFEFBFE #按鍵提示背景
     preview_text_color: 0x000000 #按鍵提示文字
