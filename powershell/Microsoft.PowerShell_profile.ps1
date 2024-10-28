@@ -15,5 +15,4 @@ function unset_proxy {
 
 set_proxy
 
-oh-my-posh init pwsh | Invoke-Expression
-oh-my-posh init pwsh --config "~/.config/moonnarga.omp.json" | Invoke-Expression
+Invoke-Expression (&starship init powershell)
