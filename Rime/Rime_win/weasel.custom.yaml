@@ -5,6 +5,7 @@ customization:
   modified_time: "Thu Apr  2 21:04:23 2020"
   rime_version: 1.5.3
 patch:
+  "global_ascii": true
   "style/horizontal": true
   "style/color_scheme": NianNian_BoBo
   "preset_color_schemes/MoonNarga":
