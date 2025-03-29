@@ -1,11 +1,9 @@
 {
     "$help": "https://aka.ms/terminal-documentation",
     "$schema": "https://aka.ms/terminal-profiles-schema",
-    "actions": 
-    [
+    "actions": [
         {
-            "command": 
-            {
+            "command": {
                 "action": "copy",
                 "singleLine": false
             },
@@ -20,8 +18,7 @@
             "keys": "ctrl+shift+f"
         },
         {
-            "command": 
-            {
+            "command": {
                 "action": "splitPane",
                 "split": "auto",
                 "splitMode": "duplicate"
@@ -35,11 +32,9 @@
     "defaultProfile": "{574e775e-4f2a-5b96-ac1e-a2962a402336}",
     "initialCols": 120,
     "initialRows": 30,
-    "profiles": 
-    {
+    "profiles": {
         "defaults": {},
-        "list": 
-        [
+        "list": [
             {
                 "backgroundImage": "C:/Users/MoonN/Pictures/vscode/63438521_p0.jpg",
                 "backgroundImageOpacity": 0.5,
@@ -47,8 +42,7 @@
                 "colorScheme": "MoonNarga",
                 "commandline": "pwsh.exe",
                 "cursorShape": "bar",
-                "font": 
-                {
+                "font": {
                     "face": "JetBrainsMono Nerd Font Mono",
                     "size": 11
                 },
@@ -125,26 +119,26 @@
     },
     "schemes": [
         {
-            "background": "#000000",
+            "name": "MoonNarga",
+            "background": "#FFFFFF",
+            "selectionBackground": "#40a1b9",
             "black": "#0C0C0C",
             "blue": "#0037DA",
             "brightBlack": "#219E89",
             "brightBlue": "#3B78FF",
             "brightCyan": "#61D6D6",
-            "brightGreen": "#16C60C",
+            "brightGreen": "#0db404",
             "brightPurple": "#B4009E",
             "brightRed": "#E74856",
-            "brightWhite": "#F2F2F2",
-            "brightYellow": "#F9F1A5",
-            "cursorColor": "#FFFFFF",
+            "brightWhite": "#37d7ec",
+            "brightYellow": "#9219c2",
+            "cursorColor": "#bb62df",
             "cyan": "#3A96DD",
-            "foreground": "#EEF6FF",
+            "foreground": "#3574bb",
             "green": "#13A10E",
-            "name": "MoonNarga",
             "purple": "#881798",
             "red": "#C50F1F",
-            "selectionBackground": "#FFFFFF",
-            "white": "#CCCCCC",
+            "white": "#2694fc",
             "yellow": "#C19C00"
         }
     ]
